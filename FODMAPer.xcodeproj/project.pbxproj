@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AD61E19F93600A09D9E /* AppDelegate.swift */; };
+		14FD7AD91E19F93600A09D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AD81E19F93600A09D9E /* ViewController.swift */; };
+		14FD7ADC1E19F93600A09D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD7ADA1E19F93600A09D9E /* Main.storyboard */; };
+		14FD7ADF1E19F93600A09D9E /* FODMAPer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */; };
+		14FD7AE11E19F93600A09D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD7AE01E19F93600A09D9E /* Assets.xcassets */; };
+		14FD7AE41E19F93600A09D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */; };
+		14FD7AEF1E19F93600A09D9E /* FODMAPerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AEE1E19F93600A09D9E /* FODMAPerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14FD7AEB1E19F93600A09D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FD7ACB1E19F93500A09D9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14FD7AD21E19F93500A09D9E;
+			remoteInfo = FODMAPer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14FD7AD31E19F93600A09D9E /* FODMAPer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FODMAPer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FD7AD61E19F93600A09D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14FD7AD81E19F93600A09D9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14FD7ADB1E19F93600A09D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14FD7ADE1E19F93600A09D9E /* FODMAPer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FODMAPer.xcdatamodel; sourceTree = "<group>"; };
+		14FD7AE01E19F93600A09D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14FD7AE31E19F93600A09D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14FD7AE51E19F93600A09D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FD7AEA1E19F93600A09D9E /* FODMAPerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FODMAPerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FD7AEE1E19F93600A09D9E /* FODMAPerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FODMAPerTests.swift; sourceTree = "<group>"; };
+		14FD7AF01E19F93600A09D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14FD7AD01E19F93500A09D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14FD7AE71E19F93600A09D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14FD7ACA1E19F93500A09D9E = {
+			isa = PBXGroup;
+			children = (
+				14FD7AD51E19F93600A09D9E /* FODMAPer */,
+				14FD7AED1E19F93600A09D9E /* FODMAPerTests */,
+				14FD7AD41E19F93600A09D9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14FD7AD41E19F93600A09D9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14FD7AD31E19F93600A09D9E /* FODMAPer.app */,
+				14FD7AEA1E19F93600A09D9E /* FODMAPerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14FD7AD51E19F93600A09D9E /* FODMAPer */ = {
+			isa = PBXGroup;
+			children = (
+				14FD7AD61E19F93600A09D9E /* AppDelegate.swift */,
+				14FD7AD81E19F93600A09D9E /* ViewController.swift */,
+				14FD7ADA1E19F93600A09D9E /* Main.storyboard */,
+				14FD7AE01E19F93600A09D9E /* Assets.xcassets */,
+				14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */,
+				14FD7AE51E19F93600A09D9E /* Info.plist */,
+				14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */,
+			);
+			path = FODMAPer;
+			sourceTree = "<group>";
+		};
+		14FD7AED1E19F93600A09D9E /* FODMAPerTests */ = {
+			isa = PBXGroup;
+			children = (
+				14FD7AEE1E19F93600A09D9E /* FODMAPerTests.swift */,
+				14FD7AF01E19F93600A09D9E /* Info.plist */,
+			);
+			path = FODMAPerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14FD7AD21E19F93500A09D9E /* FODMAPer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14FD7AF31E19F93600A09D9E /* Build configuration list for PBXNativeTarget "FODMAPer" */;
+			buildPhases = (
+				14FD7ACF1E19F93500A09D9E /* Sources */,
+				14FD7AD01E19F93500A09D9E /* Frameworks */,
+				14FD7AD11E19F93500A09D9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FODMAPer;
+			productName = FODMAPer;
+			productReference = 14FD7AD31E19F93600A09D9E /* FODMAPer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14FD7AE91E19F93600A09D9E /* FODMAPerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14FD7AF61E19F93600A09D9E /* Build configuration list for PBXNativeTarget "FODMAPerTests" */;
+			buildPhases = (
+				14FD7AE61E19F93600A09D9E /* Sources */,
+				14FD7AE71E19F93600A09D9E /* Frameworks */,
+				14FD7AE81E19F93600A09D9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14FD7AEC1E19F93600A09D9E /* PBXTargetDependency */,
+			);
+			name = FODMAPerTests;
+			productName = FODMAPerTests;
+			productReference = 14FD7AEA1E19F93600A09D9E /* FODMAPerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14FD7ACB1E19F93500A09D9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Joopkins;
+				TargetAttributes = {
+					14FD7AD21E19F93500A09D9E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					14FD7AE91E19F93600A09D9E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14FD7AD21E19F93500A09D9E;
+					};
+				};
+			};
+			buildConfigurationList = 14FD7ACE1E19F93500A09D9E /* Build configuration list for PBXProject "FODMAPer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14FD7ACA1E19F93500A09D9E;
+			productRefGroup = 14FD7AD41E19F93600A09D9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14FD7AD21E19F93500A09D9E /* FODMAPer */,
+				14FD7AE91E19F93600A09D9E /* FODMAPerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14FD7AD11E19F93500A09D9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14FD7AE41E19F93600A09D9E /* LaunchScreen.storyboard in Resources */,
+				14FD7AE11E19F93600A09D9E /* Assets.xcassets in Resources */,
+				14FD7ADC1E19F93600A09D9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14FD7AE81E19F93600A09D9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14FD7ACF1E19F93500A09D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14FD7AD91E19F93600A09D9E /* ViewController.swift in Sources */,
+				14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */,
+				14FD7ADF1E19F93600A09D9E /* FODMAPer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14FD7AE61E19F93600A09D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14FD7AEF1E19F93600A09D9E /* FODMAPerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14FD7AEC1E19F93600A09D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14FD7AD21E19F93500A09D9E /* FODMAPer */;
+			targetProxy = 14FD7AEB1E19F93600A09D9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14FD7ADA1E19F93600A09D9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FD7ADB1E19F93600A09D9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14FD7AE31E19F93600A09D9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14FD7AF11E19F93600A09D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14FD7AF21E19F93600A09D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14FD7AF41E19F93600A09D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FODMAPer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14FD7AF51E19F93600A09D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FODMAPer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		14FD7AF71E19F93600A09D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FODMAPerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FODMAPer.app/FODMAPer";
+			};
+			name = Debug;
+		};
+		14FD7AF81E19F93600A09D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FODMAPerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FODMAPer.app/FODMAPer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14FD7ACE1E19F93500A09D9E /* Build configuration list for PBXProject "FODMAPer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FD7AF11E19F93600A09D9E /* Debug */,
+				14FD7AF21E19F93600A09D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14FD7AF31E19F93600A09D9E /* Build configuration list for PBXNativeTarget "FODMAPer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FD7AF41E19F93600A09D9E /* Debug */,
+				14FD7AF51E19F93600A09D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14FD7AF61E19F93600A09D9E /* Build configuration list for PBXNativeTarget "FODMAPerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14FD7AF71E19F93600A09D9E /* Debug */,
+				14FD7AF81E19F93600A09D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14FD7ADE1E19F93600A09D9E /* FODMAPer.xcdatamodel */,
+			);
+			currentVersion = 14FD7ADE1E19F93600A09D9E /* FODMAPer.xcdatamodel */;
+			path = FODMAPer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 14FD7ACB1E19F93500A09D9E /* Project object */;
+}
