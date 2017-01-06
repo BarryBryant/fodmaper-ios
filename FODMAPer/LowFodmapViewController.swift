@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LowFodmapViewController: UIViewController {
+class LowFodmapViewController: UIViewController, UITabBarDelegate {
     
     @IBOutlet weak var fruitTab: UITabBarItem!
     @IBOutlet weak var vegiTab: UITabBarItem!
@@ -16,10 +16,12 @@ class LowFodmapViewController: UIViewController {
     @IBOutlet weak var grainTab: UITabBarItem!
     @IBOutlet weak var otherTab: UITabBarItem!
     
+    @IBOutlet weak var foodGroupTabBar: UITabBar!
     @IBOutlet var barItems: [UITabBarItem]!
     
     override func viewDidLoad() {
         initBarItems()
+        foodGroupTabBar.delegate = self
     }
     
     fileprivate func initBarItems() {
@@ -32,4 +34,12 @@ class LowFodmapViewController: UIViewController {
             }
         }
     }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == fruitTab {
+            print("sup")
+        }
+    }
+    
+    
 }

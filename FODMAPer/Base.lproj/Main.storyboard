@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-Tc-z1t">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-Tc-z1t">
+                                <rect key="frame" x="0.0" y="34" width="320" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="08j-fm-1eU">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -265,6 +265,7 @@
                     <tabBarItem key="tabBarItem" title="Low" id="OSZ-sL-55G"/>
                     <connections>
                         <outlet property="animalTab" destination="dWB-L7-7UW" id="3DN-tK-A7x"/>
+                        <outlet property="foodGroupTabBar" destination="Ap3-gz-Be6" id="pVZ-RB-PHA"/>
                         <outlet property="fruitTab" destination="6AX-Ku-NRj" id="DKK-zw-6au"/>
                         <outlet property="grainTab" destination="zn4-JO-edt" id="9cp-qp-eiC"/>
                         <outlet property="otherTab" destination="Vvj-Pt-UEa" id="QLn-lg-wIc"/>
