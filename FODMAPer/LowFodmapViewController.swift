@@ -22,6 +22,7 @@ class LowFodmapViewController: UIViewController, UITabBarDelegate {
     override func viewDidLoad() {
         initBarItems()
         foodGroupTabBar.delegate = self
+        foodGroupTabBar.selectedItem = fruitTab
     }
     
     fileprivate func initBarItems() {
