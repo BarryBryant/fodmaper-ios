@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AD61E19F93600A09D9E /* AppDelegate.swift */; };
 		14FD7AD91E19F93600A09D9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AD81E19F93600A09D9E /* MainViewController.swift */; };
-		14FD7ADC1E19F93600A09D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD7ADA1E19F93600A09D9E /* Main.storyboard */; };
 		14FD7ADF1E19F93600A09D9E /* FODMAPer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */; };
 		14FD7AE41E19F93600A09D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */; };
 		14FD7AEF1E19F93600A09D9E /* FODMAPerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AEE1E19F93600A09D9E /* FODMAPerTests.swift */; };
 		14FD7AFF1E1B254F00A09D9E /* LowFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7AFE1E1B254F00A09D9E /* LowFodmapViewController.swift */; };
 		14FD7B041E1B300100A09D9E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7B031E1B300100A09D9E /* Helpers.swift */; };
 		14FD7B071E1F197B00A09D9E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7B061E1F197B00A09D9E /* Food.swift */; };
+		14FD7B0C1E22D22C00A09D9E /* FoodTableWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7B0B1E22D22C00A09D9E /* FoodTableWorkflow.swift */; };
+		14FD7B0E1E22D8BC00A09D9E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD7B0D1E22D8BC00A09D9E /* MainCoordinator.swift */; };
 		27B0798E1E21603300641AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B0798D1E21603300641AE7 /* Assets.xcassets */; };
 		27B079901E2163C800641AE7 /* fodmaps.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B0798F1E2163C800641AE7 /* fodmaps.json */; };
 		27B079921E21641700641AE7 /* FoodsSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079911E21641700641AE7 /* FoodsSerialization.swift */; };
@@ -41,7 +42,6 @@
 		14FD7AD31E19F93600A09D9E /* FODMAPer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FODMAPer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD7AD61E19F93600A09D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FD7AD81E19F93600A09D9E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		14FD7ADB1E19F93600A09D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14FD7ADE1E19F93600A09D9E /* FODMAPer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FODMAPer.xcdatamodel; sourceTree = "<group>"; };
 		14FD7AE31E19F93600A09D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14FD7AE51E19F93600A09D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		14FD7AFE1E1B254F00A09D9E /* LowFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowFodmapViewController.swift; sourceTree = "<group>"; };
 		14FD7B031E1B300100A09D9E /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		14FD7B061E1F197B00A09D9E /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		14FD7B0B1E22D22C00A09D9E /* FoodTableWorkflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableWorkflow.swift; sourceTree = "<group>"; };
+		14FD7B0D1E22D8BC00A09D9E /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		27B0798D1E21603300641AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B0798F1E2163C800641AE7 /* fodmaps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fodmaps.json; sourceTree = "<group>"; };
 		27B079911E21641700641AE7 /* FoodsSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsSerialization.swift; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 				14FD7AD61E19F93600A09D9E /* AppDelegate.swift */,
 				14FD7AD81E19F93600A09D9E /* MainViewController.swift */,
 				14FD7AFE1E1B254F00A09D9E /* LowFodmapViewController.swift */,
-				14FD7ADA1E19F93600A09D9E /* Main.storyboard */,
 				14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */,
 				14FD7AE51E19F93600A09D9E /* Info.plist */,
 				14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */,
@@ -121,6 +122,8 @@
 				27B079991E21D93800641AE7 /* FodmapRepository.swift */,
 				27B0799B1E21DD7300641AE7 /* FoodCell.xib */,
 				27B0799D1E21DE8700641AE7 /* FoodCell.swift */,
+				14FD7B0B1E22D22C00A09D9E /* FoodTableWorkflow.swift */,
+				14FD7B0D1E22D8BC00A09D9E /* MainCoordinator.swift */,
 			);
 			path = FODMAPer;
 			sourceTree = "<group>";
@@ -232,7 +235,6 @@
 				27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */,
 				27B0798E1E21603300641AE7 /* Assets.xcassets in Resources */,
 				27B079901E2163C800641AE7 /* fodmaps.json in Resources */,
-				14FD7ADC1E19F93600A09D9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD7AFF1E1B254F00A09D9E /* LowFodmapViewController.swift in Sources */,
+				14FD7B0E1E22D8BC00A09D9E /* MainCoordinator.swift in Sources */,
 				14FD7AD91E19F93600A09D9E /* MainViewController.swift in Sources */,
+				14FD7B0C1E22D22C00A09D9E /* FoodTableWorkflow.swift in Sources */,
 				14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */,
 				27B079981E21A94E00641AE7 /* FoodSerialization.swift in Sources */,
 				27B079961E21A80900641AE7 /* JSON.swift in Sources */,
@@ -284,14 +288,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		14FD7ADA1E19F93600A09D9E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14FD7ADB1E19F93600A09D9E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
