@@ -22,6 +22,9 @@
 		27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079931E21672C00641AE7 /* FodmaperError.swift */; };
 		27B079961E21A80900641AE7 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079951E21A80900641AE7 /* JSON.swift */; };
 		27B079981E21A94E00641AE7 /* FoodSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079971E21A94E00641AE7 /* FoodSerialization.swift */; };
+		27B0799A1E21D93800641AE7 /* FodmapRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079991E21D93800641AE7 /* FodmapRepository.swift */; };
+		27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B0799B1E21DD7300641AE7 /* FoodCell.xib */; };
+		27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0799D1E21DE8700641AE7 /* FoodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		27B079931E21672C00641AE7 /* FodmaperError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FodmaperError.swift; sourceTree = "<group>"; };
 		27B079951E21A80900641AE7 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		27B079971E21A94E00641AE7 /* FoodSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSerialization.swift; sourceTree = "<group>"; };
+		27B079991E21D93800641AE7 /* FodmapRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FodmapRepository.swift; sourceTree = "<group>"; };
+		27B0799B1E21DD7300641AE7 /* FoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
+		27B0799D1E21DE8700641AE7 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				27B079931E21672C00641AE7 /* FodmaperError.swift */,
 				27B079951E21A80900641AE7 /* JSON.swift */,
 				27B079971E21A94E00641AE7 /* FoodSerialization.swift */,
+				27B079991E21D93800641AE7 /* FodmapRepository.swift */,
+				27B0799B1E21DD7300641AE7 /* FoodCell.xib */,
+				27B0799D1E21DE8700641AE7 /* FoodCell.swift */,
 			);
 			path = FODMAPer;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD7AE41E19F93600A09D9E /* LaunchScreen.storyboard in Resources */,
+				27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */,
 				27B0798E1E21603300641AE7 /* Assets.xcassets in Resources */,
 				27B079901E2163C800641AE7 /* fodmaps.json in Resources */,
 				14FD7ADC1E19F93600A09D9E /* Main.storyboard in Resources */,
@@ -246,8 +256,10 @@
 				27B079981E21A94E00641AE7 /* FoodSerialization.swift in Sources */,
 				27B079961E21A80900641AE7 /* JSON.swift in Sources */,
 				27B079921E21641700641AE7 /* FoodsSerialization.swift in Sources */,
+				27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */,
 				14FD7B041E1B300100A09D9E /* Helpers.swift in Sources */,
 				27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */,
+				27B0799A1E21D93800641AE7 /* FodmapRepository.swift in Sources */,
 				14FD7ADF1E19F93600A09D9E /* FODMAPer.xcdatamodeld in Sources */,
 				14FD7B071E1F197B00A09D9E /* Food.swift in Sources */,
 			);

@@ -12,13 +12,9 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            let foods:Array<Food> = try FoodsSerialization.allFoods()
-            let i = foods.count
-            print(i)
-        } catch {
-            print("Sorrah")
-        }
+        let fodmapRepo: FodmapRepository = FodmapRepository.init()
+        let fodmaps = fodmapRepo.getFodmaps()
+        print(fodmaps.count)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

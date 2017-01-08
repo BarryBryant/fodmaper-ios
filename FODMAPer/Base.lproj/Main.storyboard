@@ -259,6 +259,7 @@
                     <connections>
                         <outlet property="animalTab" destination="dWB-L7-7UW" id="3DN-tK-A7x"/>
                         <outlet property="foodGroupTabBar" destination="Ap3-gz-Be6" id="pVZ-RB-PHA"/>
+                        <outlet property="foodTable" destination="jGt-5S-NW0" id="Eoo-1q-I8w"/>
                         <outlet property="fruitTab" destination="6AX-Ku-NRj" id="DKK-zw-6au"/>
                         <outlet property="grainTab" destination="zn4-JO-edt" id="9cp-qp-eiC"/>
                         <outlet property="otherTab" destination="Vvj-Pt-UEa" id="QLn-lg-wIc"/>

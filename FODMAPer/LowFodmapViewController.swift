@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LowFodmapViewController: UIViewController, UITabBarDelegate {
+class LowFodmapViewController: UIViewController, UITabBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var fruitTab: UITabBarItem!
     @IBOutlet weak var vegiTab: UITabBarItem!
@@ -19,10 +19,19 @@ class LowFodmapViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var foodGroupTabBar: UITabBar!
     @IBOutlet var barItems: [UITabBarItem]!
     
+    @IBOutlet var foodTable: UITableView!
+    
+    var foods: Array<Food>!
+    
     override func viewDidLoad() {
         initBarItems()
         foodGroupTabBar.delegate = self
         foodGroupTabBar.selectedItem = fruitTab
+        let foodRepo = FodmapRepository.init()
+        foods = foodRepo.getFruits()
+        FoodCell.registerNib(in: foodTable)
+        foodTable.dataSource = self
+        foodTable.delegate = self
     }
     
     fileprivate func initBarItems() {
@@ -42,5 +51,26 @@ class LowFodmapViewController: UIViewController, UITabBarDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = FoodCell.dequeue(in: tableView, for: indexPath)
+        cell.configure(with: self.foods[indexPath.row])
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foods.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    
+        
     
 }
