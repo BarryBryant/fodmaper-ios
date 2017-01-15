@@ -8,16 +8,15 @@
 
 import UIKit
 
-class MainViewController: UITabBarController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var fodmaperTabBar: UITabBar!
+
+    var viewControllers: [UIViewController]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fodmapRepo: FodmapRepository = FodmapRepository.init()
-        let fodmaps = fodmapRepo.getFodmaps()
-        print(fodmaps.count)
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +24,9 @@ class MainViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
         
     }
+    
 
     
 }
+
 

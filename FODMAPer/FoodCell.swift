@@ -47,6 +47,13 @@ final class FoodCell: UITableViewCell {
         mLabel.textColor = (food.m != 0) ? tierColor : UIColor.black
         aLabel.textColor = (food.p != 0) ? tierColor : UIColor.black
         pLabel.textColor = (food.p != 0) ? tierColor : UIColor.black
+        
+        fLabel.alpha = (food.f > 0) ? 1.0 : 0.1
+        oLabel.alpha = (food.o != 0) ? 1.0 : 0.1
+        dLabel.alpha = (food.d != 0) ? 1.0 : 0.1
+        mLabel.alpha = (food.m != 0) ? 1.0 : 0.1
+        aLabel.alpha = (food.p != 0) ? 1.0 : 0.1
+        pLabel.alpha = (food.p != 0) ? 1.0 : 0.1
     }
     
     fileprivate func getColorForFoodTier(tier: Int) -> UIColor {
@@ -54,9 +61,9 @@ final class FoodCell: UITableViewCell {
         case 0:
             return UIColor.black
         case 1:
-            return UIColor.yellow
+            return UIColor(red:0.95, green:0.73, blue:0.45, alpha:1.0)
         case 2:
-            return UIColor.red
+            return UIColor(red:1.00, green:0.52, blue:0.65, alpha:1.0)
         default:
             return UIColor.black
         }

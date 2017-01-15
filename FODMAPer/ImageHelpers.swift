@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Helpers {
+enum ImageHelpers {
     
     static func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size

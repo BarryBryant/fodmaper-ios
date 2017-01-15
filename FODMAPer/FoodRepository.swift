@@ -8,22 +8,22 @@
 
 import Foundation
 
-final class FodmapRepository {
+final class FoodRepository {
     
     var foods: Array<Food>!
     
     init() {
         do {
             self.foods = try FoodsSerialization.allFoods()
-            let i = foods.count
-            print(i)
         } catch {
             print("Sorrah")
         }
     }
     
     public func getAllFoods() -> Array<Food> {
-        return self.foods
+        return self.foods.sorted {
+            $0.name < $1.name
+        }
     }
     
     public func getFodmaps() -> Array<Food> {
