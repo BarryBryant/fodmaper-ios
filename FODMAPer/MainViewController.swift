@@ -297,5 +297,4 @@ final class MainViewController: UIViewController {
         highFodmapContainer.addConstraint(highFodmapHeight)
     }
     
-    
 }

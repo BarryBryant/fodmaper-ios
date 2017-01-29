@@ -9,10 +9,6 @@
 import UIKit
 import QuartzCore
 
-protocol LowFodmapView {
-    func reloadData()
-}
-
 final class LowFodmapViewController:
         FadeInTitleBarViewController, UITabBarDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
@@ -25,10 +21,10 @@ final class LowFodmapViewController:
     @IBOutlet var barItems: [UITabBarItem]!
     @IBOutlet var foodTable: UITableView!
 
-    var workflow: LowFodmapWorkflow!
-    var presenter: LowFodmapPresenter!
+    var foodRepo = FoodRepository()
     var tabForRowDictionary: [Int: IndexPath] = [:]
     var currentTab = 0
+    var model = FoodRepository().getFruits()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +39,13 @@ final class LowFodmapViewController:
 
         foodTable.dataSource = self
         foodTable.delegate = self
-
-        self.workflow = LowFodmapWorkflow(foodRepository: FoodRepository())
-        self.presenter = LowFodmapPresenter()
-        presenter.subscribe(view: self)
-        workflow.observer = presenter
-
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        if presenter != nil {
-            presenter.unsubscribe()
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        initIndexPaths()
     }
-
+    
     fileprivate func initBarItems() {
         let size = CGSize(width: 30, height: 30)
         fruitTab.image = ImageHelpers.resizeImage(image: UIImage(named: "fruit")!, targetSize: size)
@@ -65,16 +54,39 @@ final class LowFodmapViewController:
         grainTab.image = ImageHelpers.resizeImage(image: UIImage(named: "wheat")!, targetSize: size)
         otherTab.image = ImageHelpers.resizeImage(image: UIImage(named: "seasoning")!, targetSize: size)
     }
+    
+    fileprivate func initIndexPaths() {
+        tabForRowDictionary[0] = foodTable.indexPathsForVisibleRows?[0]
+        tabForRowDictionary[1] = foodTable.indexPathsForVisibleRows?[0]
+        tabForRowDictionary[2] = foodTable.indexPathsForVisibleRows?[0]
+        tabForRowDictionary[3] = foodTable.indexPathsForVisibleRows?[0]
+        tabForRowDictionary[4] = foodTable.indexPathsForVisibleRows?[0]
+    }
 
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         tabForRowDictionary[currentTab] = foodTable.indexPathsForVisibleRows?[0]
         currentTab = item.tag
-        workflow.dispatchAction(action: .tabSelected(item.tag))
+        
+        switch currentTab {
+        case 0:
+            model = foodRepo.getFruits()
+        case 1:
+            model = foodRepo.getVegitables()
+        case 2:
+            model = foodRepo.getAnimalProducts()
+        case 3:
+            model = foodRepo.getGrains()
+        case 4:
+            model = foodRepo.getSeasonings()
+        default:
+            return
+        }
+        reloadData()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FoodCell.dequeue(in: tableView, for: indexPath)
-        cell.configure(with: workflow.state.food[indexPath.row])
+        cell.configure(with: model[indexPath.row])
         return cell
     }
 
@@ -83,23 +95,18 @@ final class LowFodmapViewController:
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let workflow = workflow {
-            return workflow.state.food.count
-        } else {
-            return 0
-        }
+        return model.count
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-}
-
-extension LowFodmapViewController: LowFodmapView {
 
     func reloadData() {
         foodTable.reloadData()
+        guard let row = tabForRowDictionary[currentTab] else {
+            return
+        }
+        foodTable.scrollToRow(at: row, at: .top, animated: false)
     }
-
 }
