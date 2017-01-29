@@ -14,7 +14,7 @@ protocol LowFodmapView {
 }
 
 final class LowFodmapViewController:
-        UIViewController, UITabBarDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+        FadeInTitleBarViewController, UITabBarDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var fruitTab: UITabBarItem!
     @IBOutlet weak var vegiTab: UITabBarItem!
@@ -24,7 +24,6 @@ final class LowFodmapViewController:
     @IBOutlet weak var foodGroupTabBar: UITabBar!
     @IBOutlet var barItems: [UITabBarItem]!
     @IBOutlet var foodTable: UITableView!
-    @IBOutlet var backButton: UIButton!
 
     var workflow: LowFodmapWorkflow!
     var presenter: LowFodmapPresenter!
@@ -49,16 +48,9 @@ final class LowFodmapViewController:
         self.presenter = LowFodmapPresenter()
         presenter.subscribe(view: self)
         workflow.observer = presenter
-        if let backButton = backButton {
-            backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
-        }
-    }
-    
-    func backButtonPressed() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
 
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         if presenter != nil {
             presenter.unsubscribe()

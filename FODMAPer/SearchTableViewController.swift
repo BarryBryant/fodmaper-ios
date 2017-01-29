@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 import QuartzCore
 
-class SearchTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class SearchTableViewController: FadeInTitleBarViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     @IBOutlet var foodTable: UITableView!
     @IBOutlet var searchBar: UISearchBar!
-    @IBOutlet var backButton: UIButton!
-    
+
     var tableViewModel = [Food]()
     var baseViewModel = [Food]()
     var foodRepository = FoodRepository()
@@ -32,17 +31,9 @@ class SearchTableViewController: UIViewController, UITableViewDataSource, UITabl
             searchBar.delegate = self
         }
         
-        if let backButton = backButton {
-            backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
-        }
         setData()
     }
-    
-    func backButtonPressed() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
+
     func setData() {
         tableViewModel = foodRepository.getAllFoods()
         baseViewModel = foodRepository.getAllFoods()

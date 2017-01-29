@@ -31,6 +31,7 @@
 		27B0799A1E21D93800641AE7 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079991E21D93800641AE7 /* FoodRepository.swift */; };
 		27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B0799B1E21DD7300641AE7 /* FoodCell.xib */; };
 		27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0799D1E21DE8700641AE7 /* FoodCell.swift */; };
+		27DB8ED01E3E511800ECF10D /* FadeInTitleBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB8ECF1E3E511800ECF10D /* FadeInTitleBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		27B079991E21D93800641AE7 /* FoodRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
 		27B0799B1E21DD7300641AE7 /* FoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		27B0799D1E21DE8700641AE7 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		27DB8ECF1E3E511800ECF10D /* FadeInTitleBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInTitleBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				279535F31E2604AB00B24655 /* LowFodmapPresenter.swift */,
 				2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */,
 				2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */,
+				27DB8ECF1E3E511800ECF10D /* FadeInTitleBarViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				27B079921E21641700641AE7 /* FoodsSerialization.swift in Sources */,
 				27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */,
 				279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */,
+				27DB8ED01E3E511800ECF10D /* FadeInTitleBarViewController.swift in Sources */,
 				14FD7B041E1B300100A09D9E /* ImageHelpers.swift in Sources */,
 				27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */,
 				27B0799A1E21D93800641AE7 /* FoodRepository.swift in Sources */,
