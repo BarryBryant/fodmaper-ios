@@ -335,23 +335,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-Ry-OcG">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-Ry-OcG">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-h2-gEG">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-H1-wBq" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <frame key="frameInset" width="375" height="162"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-H1-wBq" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.48566901683807373" green="0.92397969961166382" blue="0.93132472038269043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="searchAllPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="7vz-4L-gTX"/>
                                                     <segue destination="OEW-Wq-lcO" kind="show" id="Knx-4Z-I4O"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cE1-oW-drX">
-                                                <frame key="frameInset" minX="30" width="315" height="162"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cE1-oW-drX">
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Search All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-q0-yeX">
-                                                        <frame key="frameInset" minY="70.5" width="315" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-q0-yeX">
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -414,8 +411,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_tag_faces_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-9F-uun">
-                                                        <frame key="frameInset" minX="306" minY="65.666666666666657" width="48" height="47.999999999999986"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_faces_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-9F-uun">
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="fzY-uv-50Q"/>
@@ -458,8 +454,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-uv-HSP">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-yI-rky" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <frame key="frameInset" width="375" height="162"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-yI-rky" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.95215135812759399" green="0.73490947484970093" blue="0.44746440649032593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="moderateFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="iah-fy-45p"/>
@@ -474,8 +469,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_warning_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Fy-nrp">
-                                                        <frame key="frameInset" minX="306" minY="65.666666666666657" width="48" height="47.999999999999986"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_warning_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Fy-nrp">
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="Exc-f1-t7Z"/>
@@ -518,23 +512,21 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3p-lS-2u4">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-89-Dcj" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <frame key="frameInset" width="375" height="161"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-89-Dcj" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.99870032072067261" green="0.51829636096954346" blue="0.6554875373840332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="highFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="VYE-or-Jdh"/>
                                                     <segue destination="dBk-FI-BcA" kind="show" id="Hro-B3-8uu"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-FJ-geP">
+                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-FJ-geP">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High FODMAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hju-Jt-SzY">
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_error_outline_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-PI-TeO">
-                                                        <frame key="frameInset" minX="306" minY="65.666666666666657" width="48" height="47.999999999999986"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_error_outline_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-PI-TeO">
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="6MO-5c-P3z"/>

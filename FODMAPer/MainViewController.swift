@@ -258,7 +258,7 @@ final class MainViewController: UIViewController {
     }
     
     fileprivate func generateConstraints() {
-        containerHeight = mainContainerView.bounds.height / 4
+        containerHeight = (mainContainerView.bounds.height - 20) / 4
         
         searchHeight = NSLayoutConstraint(item: searchAllContainer,
                                           attribute: .height,
@@ -295,6 +295,8 @@ final class MainViewController: UIViewController {
                                               multiplier: 1.0,
                                               constant: containerHeight)
         highFodmapContainer.addConstraint(highFodmapHeight)
+        
+
     }
     
 }
