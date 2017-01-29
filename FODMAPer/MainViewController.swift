@@ -1,32 +1,26 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  FODMAPer
 //
-//  Created by Richard Bryant on 1/1/17.
+//  Created by Barry Bryant on 1/27/17.
 //  Copyright © 2017 Joopkins. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
-
-    @IBOutlet weak var fodmaperTabBar: UITabBar!
-
-    var viewControllers: [UIViewController]!
+final class MainViewController: UIViewController {
+    
+    @IBOutlet var mainViewStacks: [UIStackView]!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        for stack in mainViewStacks {
+            stack.isUserInteractionEnabled = false
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.setNeedsDisplay()
     }
-    
-
-    
 }
-
-

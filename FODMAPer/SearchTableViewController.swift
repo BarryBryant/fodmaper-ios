@@ -14,6 +14,7 @@ class SearchTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet var foodTable: UITableView!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var backButton: UIButton!
     
     var tableViewModel = [Food]()
     var baseViewModel = [Food]()
@@ -30,8 +31,17 @@ class SearchTableViewController: UIViewController, UITableViewDataSource, UITabl
         if let searchBar = self.searchBar {
             searchBar.delegate = self
         }
+        
+        if let backButton = backButton {
+            backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        }
         setData()
     }
+    
+    func backButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     func setData() {
         tableViewModel = foodRepository.getAllFoods()
