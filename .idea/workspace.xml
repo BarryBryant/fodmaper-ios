@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="90d17019-1f55-49bc-ab53-6765ea1eedcd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.xcworkspace/xcuserdata/barrybryant.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.xcworkspace/xcuserdata/barrybryant.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="MainViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            <state relative-caret-position="137">
+              <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
               <folding>
                 <element signature="e#144#161#0" expanded="true" />
               </folding>
@@ -58,8 +57,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2560" />
-    <option name="height" value="1053" />
+    <option name="width" value="1680" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -142,11 +141,12 @@
       <workItem from="1485417547115" duration="215000" />
       <workItem from="1485650889920" duration="9434000" />
       <workItem from="1485715920722" duration="2072000" />
+      <workItem from="1485729702194" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12078000" />
+    <option name="totallyTimeSpent" value="12085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -158,8 +158,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1053" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -189,6 +189,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="e#144#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2064">
@@ -226,14 +236,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FODMAPer/LowFodmapPresenter.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FODMAPer/LowFodmapPresenter.swift" />
     <entry file="file://$PROJECT_DIR$/FODMAPer/LowFodmapViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -301,8 +304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state relative-caret-position="137">
+          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
           <folding>
             <element signature="e#144#161#0" expanded="true" />
           </folding>
