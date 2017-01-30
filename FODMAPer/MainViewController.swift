@@ -23,242 +23,127 @@ final class MainViewController: UIViewController {
     @IBOutlet var moderateFodmapContainer: UIView!
     @IBOutlet var highFodmapContainer: UIView!
     @IBOutlet var backButtonPlaceholders: [UIButton]!
-    
+    @IBOutlet var navigationBarConstraint: NSLayoutConstraint!
+    @IBOutlet var navigationBarLabel: UILabel!
+    @IBOutlet var navigationBarInfoButton: UIButton!
+    @IBOutlet var navigationBarBackButtonPlaceholder: UIButton!
+
+    fileprivate var sectionContainers: [UIView]! {
+        return [searchAllContainer, lowFodmapContainer, moderateFodmapContainer, highFodmapContainer]
+    }
+
+    fileprivate var sectionHeightConstraints: [NSLayoutConstraint]! {
+        return [searchHeight, lowFodmapHeight, moderateFodmapHeight, highFodmapHeight]
+    }
+
     fileprivate var searchHeight: NSLayoutConstraint!
     fileprivate var lowFodmapHeight: NSLayoutConstraint!
     fileprivate var moderateFodmapHeight: NSLayoutConstraint!
     fileprivate var highFodmapHeight: NSLayoutConstraint!
     fileprivate var containerHeight: CGFloat!
+    fileprivate var infoContainerHeight: CGFloat!
 
     fileprivate var selectedPage: SelectedPage = .none
 
-    enum SelectedPage {
-        case none
-        case search
-        case low
-        case moderate
-        case high
+    enum SelectedPage: Int {
+        case none = -1
+        case info = -2
+        case search = 0
+        case low = 1
+        case moderate = 2
+        case high = 3
     }
     
     override func viewDidLoad() {
-        for view in mainViewContainers {
-            view.isUserInteractionEnabled = false
-        }
-        for button in backButtonPlaceholders {
-            button.alpha = 0.0
-        }
+        _ = mainViewContainers.map { $0.isUserInteractionEnabled = false }
+        _ = backButtonPlaceholders.map { $0.alpha = 0.0 }
+        navigationBarBackButtonPlaceholder.alpha = 0.0
         generateConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            switch self.selectedPage {
-            case .search:
-                self.animateFromSearch()
-            case .low:
-                self.animatefromLow()
-            case .moderate:
-                self.animatefromModerate()
-            case .high:
-                self.animatefromHigh()
-            default:
-                return
-            }
+        guard selectedPage != .none else { return }
+        if selectedPage == .info {
+            animateFromInfo()
+            return
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.animateFromSelectedPage(page: self.selectedPage)
+        }
     }
     
     @IBAction func searchAllPressed(_ sender: AnyObject) {
-        animateToSearch()
-        self.selectedPage = .search
-    }
-
-    fileprivate func animateToSearch() {
-        self.searchHeight.constant = 44
-        self.startConstraint[0].isActive = false
-        self.endConstraint[0].isActive = true
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[0] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 0.0
-            }
-            for label in otherLabels {
-                label.alpha = 0.0
-            }
-            self.backButtonPlaceholders[0].alpha = 1.0
-            self.lowFodmapContainer.isHidden = true
-            self.moderateFodmapContainer.isHidden = true
-            self.highFodmapContainer.isHidden = true
-        }
-    }
-
-    fileprivate func animateFromSearch() {
-        self.searchHeight.constant = containerHeight
-        self.startConstraint[0].isActive = true
-        self.endConstraint[0].isActive = false
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[0] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 1.0
-            }
-            for label in otherLabels {
-                label.alpha = 1.0
-            }
-            self.backButtonPlaceholders[0].alpha = 0.0
-            self.lowFodmapContainer.isHidden = false
-            self.moderateFodmapContainer.isHidden = false
-            self.highFodmapContainer.isHidden = false
-        }
+        animateToSelectedPage(page: .search)
+        selectedPage = .search
     }
 
     @IBAction func lowFodmapPressed(_ sender: AnyObject) {
-        animateToLow()
-        self.selectedPage = .low
+        animateToSelectedPage(page: .low)
+        selectedPage = .low
     }
 
-    fileprivate func animateToLow() {
-        self.lowFodmapHeight.constant = 44
-        self.startConstraint[1].isActive = false
-        self.endConstraint[1].isActive = true
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[1] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 0.0
-            }
-            for label in otherLabels {
-                label.alpha = 0.0
-            }
-            self.backButtonPlaceholders[1].alpha = 1.0
-            self.searchAllContainer.isHidden = true
-            self.moderateFodmapContainer.isHidden = true
-            self.highFodmapContainer.isHidden = true
-        }
-    }
-
-    fileprivate func animatefromLow() {
-        self.lowFodmapHeight.constant = containerHeight
-        self.startConstraint[1].isActive = true
-        self.endConstraint[1].isActive = false
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[1] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 1.0
-            }
-            for label in otherLabels {
-                label.alpha = 1.0
-            }
-            self.backButtonPlaceholders[1].alpha = 0.0
-            self.searchAllContainer.isHidden = false
-            self.moderateFodmapContainer.isHidden = false
-            self.highFodmapContainer.isHidden = false
-        }
-    }
-
-    
     @IBAction func moderateFodmapPressed(_ sender: AnyObject) {
-        animateToModerate()
-        self.selectedPage = .moderate
-    }
-
-    fileprivate func animateToModerate() {
-        self.moderateFodmapHeight.constant = 44
-        self.startConstraint[2].isActive = false
-        self.endConstraint[2].isActive = true
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[2] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 0.0
-            }
-            for label in otherLabels {
-                label.alpha = 0.0
-            }
-            self.backButtonPlaceholders[2].alpha = 1.0
-            self.searchAllContainer.isHidden = true
-            self.lowFodmapContainer.isHidden = true
-            self.highFodmapContainer.isHidden = true
-        }
-    }
-
-    fileprivate func animatefromModerate() {
-        self.moderateFodmapHeight.constant = containerHeight
-        self.startConstraint[2].isActive = true
-        self.endConstraint[2].isActive = false
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[2] }
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 1.0
-            }
-            for label in otherLabels {
-                label.alpha = 1.0
-            }
-            self.backButtonPlaceholders[2].alpha = 0.0
-            self.searchAllContainer.isHidden = false
-            self.lowFodmapContainer.isHidden = false
-            self.highFodmapContainer.isHidden = false
-        }
+        animateToSelectedPage(page: .moderate)
+        selectedPage = .moderate
     }
 
     @IBAction func highFodmapPressed(_ sender: AnyObject) {
-        if highFodmapHeight.constant == 44 {
-            animatefromHigh()
-        } else {
-            animateToHigh()
-        }
-        self.selectedPage = .high
+        animateToSelectedPage(page: .high)
+        selectedPage = .high
     }
 
-    fileprivate func animateToHigh() {
-        self.highFodmapHeight.constant = 44
-        self.startConstraint[3].isActive = false
-        self.endConstraint[3].isActive = true
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[3] }
+    fileprivate func animateInNavigationBar() {
+        navigationBarConstraint.constant = 44
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 0.0
-            }
-            for label in otherLabels {
-                label.alpha = 0.0
-            }
-            self.backButtonPlaceholders[3].alpha = 1.0
-            self.searchAllContainer.isHidden = true
-            self.lowFodmapContainer.isHidden = true
-            self.moderateFodmapContainer.isHidden = true
+            self.navigationBarLabel.alpha = 1.0
+            self.navigationBarInfoButton.alpha = 1.0
         }
     }
 
-    fileprivate func animatefromHigh() {
-        self.highFodmapHeight.constant = containerHeight
-        self.startConstraint[3].isActive = true
-        self.endConstraint[3].isActive = false
-        let otherLabels = sectionLabels.filter { $0 != sectionLabels[3] }
-        UIView.animate(withDuration: 0.5) {
+    fileprivate func animateOutNavigationBar() {
+        navigationBarConstraint.constant = 0
+        UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
-            for icon in self.icons {
-                icon.alpha = 1.0
-            }
-            for label in otherLabels {
-                label.alpha = 1.0
-            }
-            self.backButtonPlaceholders[3].alpha = 0.0
-            self.searchAllContainer.isHidden = false
-            self.lowFodmapContainer.isHidden = false
-            self.moderateFodmapContainer.isHidden = false
+            self.navigationBarLabel.alpha = 0.0
+            self.navigationBarInfoButton.alpha = 0.0
         }
     }
-    
+
+    fileprivate func animateToSelectedPage(page: SelectedPage) {
+        let index = page.rawValue
+        animateOutNavigationBar()
+        sectionHeightConstraints[index].constant = 44
+        startConstraint[index].isActive = false
+        endConstraint[index].isActive = true
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            _ = self.icons.map { $0.alpha = 0.0 }
+            _ = self.sectionLabels.filter { $0 != self.sectionLabels[index] }.map { $0.alpha = 0.0 }
+            self.backButtonPlaceholders[index].alpha = 1.0
+            _ = self.sectionContainers.filter { $0 != self.sectionContainers[index] }.map { $0.isHidden = true }
+        }
+    }
+
+    fileprivate func animateFromSelectedPage(page: SelectedPage) {
+        let index = page.rawValue
+        animateInNavigationBar()
+        sectionHeightConstraints[index].constant = containerHeight
+        startConstraint[index].isActive = true
+        endConstraint[index].isActive = false
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            _ = self.icons.map { $0.alpha = 1.0 }
+            _ = self.sectionLabels.filter { $0 != self.sectionLabels[index] }.map { $0.alpha = 1.0 }
+            self.backButtonPlaceholders[index].alpha = 0.0
+            _ = self.sectionContainers.filter { $0 != self.sectionContainers[index] }.map { $0.isHidden = false }
+        }
+    }
+
     fileprivate func generateConstraints() {
-        containerHeight = (mainContainerView.bounds.height - 20) / 4
+        containerHeight = (mainContainerView.bounds.height - 64) / 4
+        infoContainerHeight = (mainContainerView.bounds.height - 64) / 3
         
         searchHeight = NSLayoutConstraint(item: searchAllContainer,
                                           attribute: .height,
@@ -268,7 +153,7 @@ final class MainViewController: UIViewController {
                                           multiplier: 1.0,
                                           constant: containerHeight)
         searchAllContainer.addConstraint(searchHeight)
-        
+
         lowFodmapHeight = NSLayoutConstraint(item: lowFodmapContainer,
                                              attribute: .height,
                                              relatedBy: .equal,
@@ -277,7 +162,7 @@ final class MainViewController: UIViewController {
                                              multiplier: 1.0,
                                              constant: containerHeight)
         lowFodmapContainer.addConstraint(lowFodmapHeight)
-        
+
         moderateFodmapHeight = NSLayoutConstraint(item: moderateFodmapContainer,
                                                   attribute: .height,
                                                   relatedBy: .equal,
@@ -286,7 +171,7 @@ final class MainViewController: UIViewController {
                                                   multiplier: 1.0,
                                                   constant: containerHeight)
         moderateFodmapContainer.addConstraint(moderateFodmapHeight)
-        
+
         highFodmapHeight = NSLayoutConstraint(item: highFodmapContainer,
                                               attribute: .height,
                                               relatedBy: .equal,
@@ -295,8 +180,76 @@ final class MainViewController: UIViewController {
                                               multiplier: 1.0,
                                               constant: containerHeight)
         highFodmapContainer.addConstraint(highFodmapHeight)
-        
-
     }
     
+    
+    @IBAction func onPressInfo(_ sender: AnyObject) {
+        selectedPage = .info
+        animateToInfo()
+    }
+    
+    fileprivate func animateToInfo() {
+        searchHeight.constant = infoContainerHeight
+        lowFodmapHeight.constant = infoContainerHeight
+        moderateFodmapHeight.constant = infoContainerHeight
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            self.highFodmapContainer.isHidden = true
+            self.sectionLabels[3].alpha = 0.0
+            self.icons[3].alpha = 0.0
+            self.navigationBarInfoButton.alpha = 0.0
+            self.navigationBarBackButtonPlaceholder.alpha = 1.0
+        }
+        crossDissolve(label: sectionLabels[0], text: "Watch App Introduction")
+        crossDissolve(label: sectionLabels[1], text: "Feedback")
+        crossDissolve(label: sectionLabels[2], text: "Share")
+        crossDissolve(label: navigationBarLabel, text: "FODMAPer Info")
+        
+        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_home_white_48px")!)
+        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_mail_white_48px")!)
+        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_share_white_48px")!)
+    }
+    
+    fileprivate func animateFromInfo() {
+        searchHeight.constant = containerHeight
+        lowFodmapHeight.constant = containerHeight
+        moderateFodmapHeight.constant = containerHeight
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            self.highFodmapContainer.isHidden = false
+            self.sectionLabels[3].alpha = 1.0
+            self.icons[3].alpha = 1.0
+            self.navigationBarInfoButton.alpha = 1.0
+            self.navigationBarBackButtonPlaceholder.alpha = 0.0
+        }
+        crossDissolve(label: sectionLabels[0], text: "Search All")
+        crossDissolve(label: sectionLabels[1], text: "Low FODMAP")
+        crossDissolve(label: sectionLabels[2], text: "Moderate FODMAP")
+        crossDissolve(label: navigationBarLabel, text: "FODMAPer")
+        
+        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_search_black_48px")!)
+        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_tag_faces_black_48px")!)
+        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_warning_black_48px")!)
+    }
+    
+    fileprivate func crossDissolve(label: UILabel, text: String) {
+        UIView.transition(with: label,
+                          duration: 0.3,
+                          options: [.transitionCrossDissolve],
+                          animations: {
+                            
+                            label.text = text
+            }, completion: nil)
+    }
+    
+    fileprivate func crossDissolveImage(imageView: UIImageView, image: UIImage) {
+        UIView.transition(with: imageView,
+                          duration: 0.3,
+                          options: [.transitionCrossDissolve],
+                          animations: {
+                            
+                            imageView.image = image
+            }, completion: nil)
+    }
+
 }

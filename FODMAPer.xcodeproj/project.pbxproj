@@ -17,6 +17,7 @@
 		2710D9641E2304EA00AE022A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710D9631E2304EA00AE022A /* Main.storyboard */; };
 		2743C4C01E3BE02D00C8BFEF /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */; };
 		2743C4C21E3BE5B000C8BFEF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */; };
+		2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */; };
 		279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */; };
 		279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535ED1E25E07900B24655 /* HighFodmapViewController.swift */; };
 		279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EF1E25E3AA00B24655 /* ModerateFodmapViewController.swift */; };
@@ -58,6 +59,7 @@
 		2710D9631E2304EA00AE022A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		279535ED1E25E07900B24655 /* HighFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFodmapViewController.swift; sourceTree = "<group>"; };
 		279535EF1E25E3AA00B24655 /* ModerateFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModerateFodmapViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				279535ED1E25E07900B24655 /* HighFodmapViewController.swift */,
 				2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */,
 				27B0799D1E21DE8700641AE7 /* FoodCell.swift */,
+				2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				2743C4C01E3BE02D00C8BFEF /* HomeScreenButton.swift in Sources */,
 				14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */,
 				27B079981E21A94E00641AE7 /* FoodSerialization.swift in Sources */,
+				2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */,
 				27B079961E21A80900641AE7 /* JSON.swift in Sources */,
 				27B079921E21641700641AE7 /* FoodsSerialization.swift in Sources */,
 				27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */,

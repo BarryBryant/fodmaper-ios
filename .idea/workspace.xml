@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90d17019-1f55-49bc-ab53-6765ea1eedcd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FODMAPer/InfoViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.xcworkspace/xcuserdata/barrybryant.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.xcworkspace/xcuserdata/barrybryant.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/FODMAPer.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer/Assets.xcassets/ic_info_black_48px.imageset/Contents.json" afterPath="$PROJECT_DIR$/FODMAPer/Assets.xcassets/ic_info_black_48px.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer/Main.storyboard" afterPath="$PROJECT_DIR$/FODMAPer/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FODMAPer/MainViewController.swift" afterPath="$PROJECT_DIR$/FODMAPer/MainViewController.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +32,8 @@
       <file leaf-file-name="MainViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            <state relative-caret-position="1203">
+              <caret line="137" column="8" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
               <folding>
                 <element signature="e#144#161#0" expanded="true" />
               </folding>
@@ -57,8 +63,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1023" />
+    <option name="width" value="3440" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -97,7 +103,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Swift" />
-    <property name="SearchEverywhereHistoryKey" value="spl&#9;ACTION&#9;Unsplit&#10;split&#9;ACTION&#9;SplitVertically" />
+    <property name="SearchEverywhereHistoryKey" value="sear&#9;ACTION&#9;SearchEverywhere&#10;spl&#9;ACTION&#9;Unsplit&#10;split&#9;ACTION&#9;SplitVertically" />
     <property name="OverrideImplement.combined" value="true" />
   </component>
   <component name="RunManager" selected="Application.FODMAPer">
@@ -142,11 +148,13 @@
       <workItem from="1485650889920" duration="9434000" />
       <workItem from="1485715920722" duration="2072000" />
       <workItem from="1485729702194" duration="7000" />
+      <workItem from="1485786366686" duration="284000" />
+      <workItem from="1485793396727" duration="1935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12085000" />
+    <option name="totallyTimeSpent" value="14304000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -158,8 +166,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="3440" height="1417" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -189,6 +197,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FODMAPer/FadeInTitleBarViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+          <folding>
+            <marker date="1485718494000" expanded="true" signature="0:152" ph="//..." />
+            <marker date="1485718494000" expanded="false" signature="154:184" ph="import ..." />
+            <marker date="1485718494000" expanded="true" signature="239:1424" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="460:698" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="750:879" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="750:959" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="1012:1058" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="1052:1058" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="1114:1327" ph="{...}" />
+            <marker date="1485718494000" expanded="true" signature="1359:1420" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -213,26 +240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2256">
           <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-          <folding>
-            <marker date="1485721731000" expanded="true" signature="0:148" ph="//..." />
-            <marker date="1485721731000" expanded="true" signature="150:180" ph="import ..." />
-            <marker date="1485721731000" expanded="true" signature="205:230" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="377:751" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1485:3181" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1021:1739" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1791:1992" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2027:2088" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1540:1623" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1661:2231" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2299:2481" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2582:2741" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2803:2827" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2917:3054" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3149:3174" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3769:3771" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3257:3295" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3258:3295" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -241,26 +248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <marker date="1485721731000" expanded="true" signature="0:148" ph="//..." />
-            <marker date="1485721731000" expanded="true" signature="150:180" ph="import ..." />
-            <marker date="1485721731000" expanded="true" signature="205:230" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="377:751" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1485:3181" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1021:1739" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1791:1992" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2027:2088" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1540:1623" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="1661:2231" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2299:2481" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2582:2741" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2803:2827" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="2917:3054" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3149:3174" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3769:3771" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3257:3295" ph="{...}" />
-            <marker date="1485721731000" expanded="true" signature="3258:3295" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -268,25 +255,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <marker date="1485714720000" expanded="true" signature="0:149" ph="//..." />
-            <marker date="1485714720000" expanded="false" signature="151:199" ph="import ..." />
-            <marker date="1485714720000" expanded="true" signature="328:2102" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="566:861" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="882:996" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="1101:1255" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="1321:1345" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="1439:1482" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="1581:1606" ph="{...}" />
-            <marker date="1485714720000" expanded="true" signature="1691:2095" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FODMAPer/FadeInTitleBarViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="624">
+          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
           <folding>
             <marker date="1485718494000" expanded="true" signature="0:152" ph="//..." />
             <marker date="1485718494000" expanded="false" signature="154:184" ph="import ..." />
@@ -304,8 +279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FODMAPer/MainViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="16" column="47" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state relative-caret-position="1203">
+          <caret line="137" column="8" lean-forward="false" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
             <element signature="e#144#161#0" expanded="true" />
           </folding>
