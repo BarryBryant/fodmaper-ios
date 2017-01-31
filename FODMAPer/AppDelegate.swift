@@ -8,15 +8,58 @@
 
 import UIKit
 import CoreData
+import Onboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    fileprivate let userHasOnboardedKey = "User_Has_Onboarded"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        return true
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        guard let window = window else { return false }
+//        
+//        window.backgroundColor = UIColor.white
+//        
+//        let userHasOnboarded = UserDefaults.standard.bool(forKey: userHasOnboardedKey)
+//        
+//        if (userHasOnboarded) {
+//            setUpNormalRootViewController()
+//        } else {
+//            window.rootViewController = generateOnboardingViewController()
+//        }
+//        
+//        application.statusBarStyle = .lightContent;
+//        window.makeKeyAndVisible()
+        return true;
+    }
+    
+    fileprivate func setUpNormalRootViewController() {
+        let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FODMAPer") as UIViewController
+        window?.rootViewController = viewController
+
+    }
+    
+    fileprivate func generateOnboardingViewController() -> UIViewController {
+        let firstPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: UIImage(named: "icon"), buttonText: "Text For Button") { () -> Void in
+
+        }
+        let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "background"), contents: [firstPage])
+
+//        onboardingVC.shouldFadeTransitions = YES;
+//        onboardingVC.fadePageControlOnLastPage = YES;
+//        onboardingVC.fadeSkipButtonOnLastPage = YES;
+        
+        // If you want to allow skipping the onboarding process, enable skipping and set a block to be executed
+        // when the user hits the skip button.
+//        onboardingVC.allowSkipping = YES;
+//        onboardingVC.skipHandler = ^{
+//            [self handleOnboardingCompletion];
+//        };
+        
+        return onboardingVC!;
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

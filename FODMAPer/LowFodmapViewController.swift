@@ -22,15 +22,20 @@ final class LowFodmapViewController:
     @IBOutlet var foodTable: UITableView!
 
     var foodRepo = FoodRepository()
-    var tabForRowDictionary: [Int: IndexPath] = [:]
-    var currentTab = 0
+    var indexPathForTab: [Tab: IndexPath] = [:]
+    enum Tab: Int {
+        case fruit = 0
+        case vegitable = 1
+        case animal = 2
+        case grain = 3
+        case other = 4
+    }
+    var currentTab: Tab = .fruit
     var model = FoodRepository().getFruits()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initBarItems()
-
-        self.navigationController?.navigationBar.isHidden = false
 
         foodGroupTabBar.delegate = self
         foodGroupTabBar.selectedItem = fruitTab
@@ -56,30 +61,32 @@ final class LowFodmapViewController:
     }
     
     fileprivate func initIndexPaths() {
-        tabForRowDictionary[0] = foodTable.indexPathsForVisibleRows?[0]
-        tabForRowDictionary[1] = foodTable.indexPathsForVisibleRows?[0]
-        tabForRowDictionary[2] = foodTable.indexPathsForVisibleRows?[0]
-        tabForRowDictionary[3] = foodTable.indexPathsForVisibleRows?[0]
-        tabForRowDictionary[4] = foodTable.indexPathsForVisibleRows?[0]
+        indexPathForTab[.fruit] = foodTable.indexPathsForVisibleRows?[0]
+        indexPathForTab[.vegitable] = foodTable.indexPathsForVisibleRows?[0]
+        indexPathForTab[.animal] = foodTable.indexPathsForVisibleRows?[0]
+        indexPathForTab[.grain] = foodTable.indexPathsForVisibleRows?[0]
+        indexPathForTab[.other] = foodTable.indexPathsForVisibleRows?[0]
     }
 
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        tabForRowDictionary[currentTab] = foodTable.indexPathsForVisibleRows?[0]
-        currentTab = item.tag
+        indexPathForTab[currentTab] = foodTable.indexPathsForVisibleRows?[0]
+        guard let currentTab = LowFodmapViewController.Tab(rawValue: item.tag) else {
+            print("Bad tab index")
+            return
+        }
+        self.currentTab = currentTab
         
         switch currentTab {
-        case 0:
+        case .fruit:
             model = foodRepo.getFruits()
-        case 1:
+        case .vegitable:
             model = foodRepo.getVegitables()
-        case 2:
+        case .animal:
             model = foodRepo.getAnimalProducts()
-        case 3:
+        case .grain:
             model = foodRepo.getGrains()
-        case 4:
+        case .other:
             model = foodRepo.getSeasonings()
-        default:
-            return
         }
         reloadData()
     }
@@ -104,7 +111,7 @@ final class LowFodmapViewController:
 
     func reloadData() {
         foodTable.reloadData()
-        guard let row = tabForRowDictionary[currentTab] else {
+        guard let row = indexPathForTab[currentTab] else {
             return
         }
         foodTable.scrollToRow(at: row, at: .top, animated: false)

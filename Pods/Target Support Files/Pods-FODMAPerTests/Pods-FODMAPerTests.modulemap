@@ -1,0 +1,6 @@
+framework module Pods_FODMAPerTests {
+  umbrella header "Pods-FODMAPerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
