@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 final class InfoViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
@@ -41,10 +42,38 @@ final class InfoViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func sendEmail(_ sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setSubject("FODMAPer Feedback")
+            mail.setToRecipients(["fodmaper.app@gmail.com"])
+            mail.setMessageBody("Feedback and Suggestions:", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            //show no email alert
+        }
+    }
+    
+    @IBAction func shareApp(_ sender: AnyObject) {
+        let shareActivity = UIActivityViewController(activityItems: ["<html><body>Check out FODMAPer: <a href='http://apple.com'>iOS</a> <a href='https://play.google.com/store/apps/details?id=com.b3sk.fodmaper&hl=en!'>Android</a></body></html>"], applicationActivities: nil)
+        present(shareActivity, animated: true)
+    }
+    
     @IBAction func showAppOnboarding(_ sender: AnyObject) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         dismiss(animated: false) {
             appDelegate?.generateOnboardingViewController()
         }
     }
+    
+}
+
+extension InfoViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
 }

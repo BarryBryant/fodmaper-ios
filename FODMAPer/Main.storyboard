@@ -203,6 +203,7 @@
                                                 <color key="backgroundColor" red="0.69711035489999995" green="0.86673587559999998" blue="0.47011822460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="lowFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="LzA-xq-JCi"/>
+                                                    <action selector="sendEmail:" destination="uje-6T-oYb" eventType="touchUpInside" id="sQx-w1-aND"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-t7-De1">
@@ -247,6 +248,7 @@
                                                 <color key="backgroundColor" red="0.95215135809999996" green="0.73490947480000002" blue="0.44746440650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="moderateFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="PdZ-9z-z6q"/>
+                                                    <action selector="shareApp:" destination="uje-6T-oYb" eventType="touchUpInside" id="M1U-EL-ryg"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2b-Nv-Ft2">
