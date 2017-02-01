@@ -40,4 +40,11 @@ final class InfoViewController: UIViewController {
     func backButtonPressed() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func showAppOnboarding(_ sender: AnyObject) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        dismiss(animated: false) {
+            appDelegate?.generateOnboardingViewController()
+        }
+    }
 }

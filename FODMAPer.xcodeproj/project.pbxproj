@@ -31,7 +31,6 @@
 		27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B0799B1E21DD7300641AE7 /* FoodCell.xib */; };
 		27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0799D1E21DE8700641AE7 /* FoodCell.swift */; };
 		27DB8ED01E3E511800ECF10D /* FadeInTitleBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB8ECF1E3E511800ECF10D /* FadeInTitleBarViewController.swift */; };
-		27DCF9371E4005BA0090E1DE /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCF9361E4005B90090E1DE /* IntroViewController.swift */; };
 		B8DA6123D2018FAC62A883A1 /* Pods_FODMAPerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C70718C421DF3702EA0DEE /* Pods_FODMAPerTests.framework */; };
 		FAC7D93583E7CC98F700F4EA /* Pods_FODMAPer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F07402C5EBE96C597B6818 /* Pods_FODMAPer.framework */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,6 @@
 		27B0799B1E21DD7300641AE7 /* FoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		27B0799D1E21DE8700641AE7 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		27DB8ECF1E3E511800ECF10D /* FadeInTitleBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInTitleBarViewController.swift; sourceTree = "<group>"; };
-		27DCF9361E4005B90090E1DE /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		742D945640AC70687E0C722A /* Pods-FODMAPer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FODMAPer.release.xcconfig"; path = "Pods/Target Support Files/Pods-FODMAPer/Pods-FODMAPer.release.xcconfig"; sourceTree = "<group>"; };
 		79C70718C421DF3702EA0DEE /* Pods_FODMAPerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FODMAPerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6643C0C4992D0DB0BFE4A6E /* Pods-FODMAPer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FODMAPer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FODMAPer/Pods-FODMAPer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */,
 				27B0799D1E21DE8700641AE7 /* FoodCell.swift */,
 				2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */,
-				27DCF9361E4005B90090E1DE /* IntroViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -454,7 +451,6 @@
 				2743C4C21E3BE5B000C8BFEF /* MainViewController.swift in Sources */,
 				14FD7B071E1F197B00A09D9E /* Food.swift in Sources */,
 				279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */,
-				27DCF9371E4005BA0090E1DE /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

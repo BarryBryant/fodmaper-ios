@@ -18,21 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        guard let window = window else { return false }
-//        
-//        window.backgroundColor = UIColor.white
-//        
-//        let userHasOnboarded = UserDefaults.standard.bool(forKey: userHasOnboardedKey)
-//        
-//        if (userHasOnboarded) {
-//            setUpNormalRootViewController()
-//        } else {
-//            window.rootViewController = generateOnboardingViewController()
-//        }
-//        
-//        application.statusBarStyle = .lightContent;
-//        window.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = window else { return false }
+        
+        window.backgroundColor = UIColor.white
+        
+        let userHasOnboarded = UserDefaults.standard.bool(forKey: userHasOnboardedKey)
+        
+        if (false) {
+            setUpNormalRootViewController()
+        } else {
+            generateOnboardingViewController()
+        }
+        
+        application.statusBarStyle = .lightContent;
+        window.makeKeyAndVisible()
         return true;
     }
     
@@ -42,24 +42,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
     
-    fileprivate func generateOnboardingViewController() -> UIViewController {
-        let firstPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: UIImage(named: "icon"), buttonText: "Text For Button") { () -> Void in
+    fileprivate func handleOnboardingCompletion() {
+        UserDefaults.standard.set(true, forKey: userHasOnboardedKey)
+        setUpNormalRootViewController()
+    }
 
+    func generateOnboardingViewController() {
+        //God help me
+        let lowAttachment = NSTextAttachment()
+        lowAttachment.image = UIImage(named: "ic_tag_faces_black_48px")?.tintWithColor(color: UIColor.white)
+        let lowString = NSAttributedString(attachment: lowAttachment)
+        
+        let moderateAttachment = NSTextAttachment()
+        moderateAttachment.image = UIImage(named: "ic_warning_black_48px")?.tintWithColor(color: UIColor.white)
+        let moderateString = NSAttributedString(attachment: moderateAttachment)
+        
+        let highAttachment = NSTextAttachment()
+        highAttachment.image = UIImage(named: "ic_clear_white_48pt")?.tintWithColor(color: UIColor.white)
+        let highString = NSAttributedString(attachment: highAttachment)
+        
+        let myString = NSMutableAttributedString(string: "")
+        myString.append(highString)
+        myString.append(NSMutableAttributedString(string: "\nHigh FODMAPs\n\n"))
+        myString.append(moderateString)
+        myString.append(NSMutableAttributedString(string: "\nModerate FODMAPs"))
+        myString.append(NSMutableAttributedString(string: "\nLimit these!\n\n"))
+        myString.append(lowString)
+        myString.append(NSMutableAttributedString(string: "\nLow FODMAPs\n\n"))
+        
+        let firstPage = OnboardingContentViewController(title: "FODMAPer", body: "A pocket reference for the low FODMAP diet.", image: UIImage(named: "onboarding_icon"), buttonText: nil) { }
+        firstPage.view.backgroundColor = UIColor(red:0.77, green:0.50, blue:0.85, alpha:1.0)
+        
+        let secondPage = OnboardingContentViewController(title: "What is a FODMAP?", body: "Fermentable \nOligosaccharides \nDisaccharides \nMonosaccharides \nAnd Polyols \n(Indigestible Sugars)", image: nil, buttonText: nil) { }
+        secondPage.view.backgroundColor = UIColor(red:0.70, green:0.87, blue:0.47, alpha:1.0)
+        secondPage.topPadding = 0.0
+        
+        let thirdPage = OnboardingContentViewController(title: nil, body: nil, image: nil, buttonText: "Got it!") {
+            self.handleOnboardingCompletion()
         }
-        let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "background"), contents: [firstPage])
+        thirdPage.view.backgroundColor = UIColor(red:1.00, green:0.52, blue:0.65, alpha:1.0)
+        thirdPage.bodyLabel.attributedText = myString
+        thirdPage.topPadding = 0.0
+        thirdPage.underTitlePadding = 0.0
+        thirdPage.underIconPadding = 0.0
+        
+        guard let onboardingVC = OnboardingViewController(backgroundImage: nil, contents: [firstPage, secondPage, thirdPage]) else { return }
 
-//        onboardingVC.shouldFadeTransitions = YES;
-//        onboardingVC.fadePageControlOnLastPage = YES;
-//        onboardingVC.fadeSkipButtonOnLastPage = YES;
+        onboardingVC.shouldFadeTransitions = true
+        onboardingVC.fadeSkipButtonOnLastPage = true
+
+        onboardingVC.allowSkipping = false
+        onboardingVC.skipHandler = {
+            self.handleOnboardingCompletion()
+        }
         
-        // If you want to allow skipping the onboarding process, enable skipping and set a block to be executed
-        // when the user hits the skip button.
-//        onboardingVC.allowSkipping = YES;
-//        onboardingVC.skipHandler = ^{
-//            [self handleOnboardingCompletion];
-//        };
-        
-        return onboardingVC!;
+        if window?.rootViewController != nil {
+            window?.rootViewController?.dismiss(animated: true)
+        }
+        window?.rootViewController = onboardingVC
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -132,4 +172,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
