@@ -52,7 +52,11 @@ final class InfoViewController: UIViewController {
             
             present(mail, animated: true)
         } else {
-            //show no email alert
+            let emailAlert = UIAlertController(title: "Email Error", message: "Email has not been configured on this device. Please set up your email and try again.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default)
+            emailAlert.addAction(action)
+            self.present(emailAlert, animated: true)
+            
         }
     }
     
