@@ -17,11 +17,11 @@
 		2710D9641E2304EA00AE022A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710D9631E2304EA00AE022A /* Main.storyboard */; };
 		2743C4C01E3BE02D00C8BFEF /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */; };
 		2743C4C21E3BE5B000C8BFEF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */; };
+		274E005D1EAAF338004708F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274E005C1EAAF338004708F0 /* Assets.xcassets */; };
 		2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */; };
 		279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */; };
 		279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535ED1E25E07900B24655 /* HighFodmapViewController.swift */; };
 		279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EF1E25E3AA00B24655 /* ModerateFodmapViewController.swift */; };
-		27B0798E1E21603300641AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B0798D1E21603300641AE7 /* Assets.xcassets */; };
 		27B079901E2163C800641AE7 /* fodmaps.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B0798F1E2163C800641AE7 /* fodmaps.json */; };
 		27B079921E21641700641AE7 /* FoodsSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079911E21641700641AE7 /* FoodsSerialization.swift */; };
 		27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B079931E21672C00641AE7 /* FodmaperError.swift */; };
@@ -63,11 +63,11 @@
 		2710D9631E2304EA00AE022A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		274E005C1EAAF338004708F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		279535ED1E25E07900B24655 /* HighFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFodmapViewController.swift; sourceTree = "<group>"; };
 		279535EF1E25E3AA00B24655 /* ModerateFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModerateFodmapViewController.swift; sourceTree = "<group>"; };
-		27B0798D1E21603300641AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B0798F1E2163C800641AE7 /* fodmaps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fodmaps.json; sourceTree = "<group>"; };
 		27B079911E21641700641AE7 /* FoodsSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsSerialization.swift; sourceTree = "<group>"; };
 		27B079931E21672C00641AE7 /* FodmaperError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FodmaperError.swift; sourceTree = "<group>"; };
@@ -138,6 +138,7 @@
 		14FD7AD51E19F93600A09D9E /* FODMAPer */ = {
 			isa = PBXGroup;
 			children = (
+				274E005C1EAAF338004708F0 /* Assets.xcassets */,
 				27B079A71E22F61200641AE7 /* Model */,
 				27B079A61E22F5D400641AE7 /* UI */,
 				27B079A51E22F58500641AE7 /* Data */,
@@ -146,7 +147,6 @@
 				14FD7AE21E19F93600A09D9E /* LaunchScreen.storyboard */,
 				14FD7AE51E19F93600A09D9E /* Info.plist */,
 				14FD7ADD1E19F93600A09D9E /* FODMAPer.xcdatamodeld */,
-				27B0798D1E21603300641AE7 /* Assets.xcassets */,
 			);
 			path = FODMAPer;
 			sourceTree = "<group>";
@@ -279,7 +279,8 @@
 				TargetAttributes = {
 					14FD7AD21E19F93500A09D9E = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = E53UD7B82M;
+						ProvisioningStyle = Manual;
 					};
 					14FD7AE91E19F93600A09D9E = {
 						CreatedOnToolsVersion = 8.1;
@@ -321,8 +322,8 @@
 				14FD7AE41E19F93600A09D9E /* LaunchScreen.storyboard in Resources */,
 				27B0799C1E21DD7300641AE7 /* FoodCell.xib in Resources */,
 				2710D9641E2304EA00AE022A /* Main.storyboard in Resources */,
-				27B0798E1E21603300641AE7 /* Assets.xcassets in Resources */,
 				27B079901E2163C800641AE7 /* fodmaps.json in Resources */,
+				274E005D1EAAF338004708F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,12 +583,17 @@
 			baseConfigurationReference = E6643C0C4992D0DB0BFE4A6E /* Pods-FODMAPer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = E53UD7B82M;
 				INFOPLIST_FILE = FODMAPer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ecbd28d1-257a-4b12-b4bc-d3b04c9f3d41";
+				PROVISIONING_PROFILE_SPECIFIER = FODMAPer;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -596,12 +602,17 @@
 			baseConfigurationReference = 742D945640AC70687E0C722A /* Pods-FODMAPer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = E53UD7B82M;
 				INFOPLIST_FILE = FODMAPer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joopkins.FODMAPer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ecbd28d1-257a-4b12-b4bc-d3b04c9f3d41";
+				PROVISIONING_PROFILE_SPECIFIER = FODMAPer;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

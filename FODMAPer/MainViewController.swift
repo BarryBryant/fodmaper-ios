@@ -227,9 +227,9 @@ final class MainViewController: UIViewController {
         crossDissolve(label: sectionLabels[2], text: "Moderate FODMAP")
         crossDissolve(label: navigationBarLabel, text: "FODMAPer")
         
-        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_search_black_48px")!)
-        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_tag_faces_black_48px")!)
-        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_warning_black_48px")!)
+        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_search_white_48pt")!)
+        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_tag_faces_white_48pt")!)
+        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_warning_white_48pt")!)
     }
     
     fileprivate func crossDissolve(label: UILabel, text: String) {

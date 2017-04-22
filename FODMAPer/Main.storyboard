@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="44" id="izy-hn-jdQ"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -147,7 +147,7 @@
                                             <constraint firstAttribute="height" constant="44" id="ucq-xg-aw6"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                        <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
@@ -179,13 +179,13 @@
                                                 <rect key="frame" x="30" y="0.0" width="315" height="201"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch App Introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djh-cw-Wph">
-                                                        <rect key="frame" x="0.0" y="90.5" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="91" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-uw-IMc">
-                                                        <rect key="frame" x="267" y="76.5" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="77" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="K2J-4m-uZf"/>
@@ -398,7 +398,7 @@
                                     <constraint firstAttribute="height" constant="44" id="fgF-iw-Iu6"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -476,7 +476,7 @@
                                     <constraint firstAttribute="height" constant="44" id="eEA-3z-56b"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -550,7 +550,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Mfl-hC-MEc"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -633,7 +633,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="hws-rp-MOi">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="hws-rp-MOi">
                                                         <rect key="frame" x="267" y="51.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -657,7 +657,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="eAX-rl-eTD"/>
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
@@ -697,7 +697,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_faces_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-9F-uun">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_faces_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-9F-uun">
                                                         <rect key="frame" x="267" y="51" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -721,7 +721,7 @@
                                                     <constraint firstAttribute="width" constant="42" id="H2s-Rz-ZCk"/>
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
@@ -760,7 +760,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_warning_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Fy-nrp">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_warning_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Fy-nrp">
                                                         <rect key="frame" x="267" y="51.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -784,7 +784,7 @@
                                                     <constraint firstAttribute="width" constant="42" id="nzd-3O-i2v"/>
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
@@ -823,7 +823,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_error_outline_black_48px" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-PI-TeO">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_error_outline_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-PI-TeO">
                                                         <rect key="frame" x="267" y="51" width="48" height="48"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -847,7 +847,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="oFb-e8-DSA"/>
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                                <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
@@ -894,7 +894,7 @@
                                             <constraint firstAttribute="height" constant="24" id="j2h-t1-B6H"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_info_black_48px"/>
+                                        <state key="normal" image="ic_info_outline_white_48pt"/>
                                         <connections>
                                             <action selector="onPressInfo:" destination="HiH-AP-IOx" eventType="touchUpInside" id="zxJ-oK-ee7"/>
                                             <segue destination="uje-6T-oYb" kind="show" id="syH-Op-HYi"/>
@@ -907,7 +907,7 @@
                                             <constraint firstAttribute="height" constant="44" id="gaM-ql-HwG"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_keyboard_arrow_left_black_48px">
+                                        <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
@@ -982,14 +982,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_error_outline_black_48px" width="36" height="36"/>
+        <image name="ic_error_outline_white_48pt" width="48" height="48"/>
         <image name="ic_home_white_48px" width="36" height="36"/>
-        <image name="ic_info_black_48px" width="39" height="39"/>
-        <image name="ic_keyboard_arrow_left_black_48px" width="36" height="36"/>
+        <image name="ic_info_outline_white_48pt" width="48" height="48"/>
+        <image name="ic_keyboard_arrow_left_white_48pt" width="48" height="48"/>
         <image name="ic_mail_white_48px" width="36" height="36"/>
-        <image name="ic_search_black_48px" width="36" height="36"/>
+        <image name="ic_search_white_48pt" width="48" height="48"/>
         <image name="ic_share_white_48px" width="36" height="36"/>
-        <image name="ic_tag_faces_black_48px" width="36" height="36"/>
-        <image name="ic_warning_black_48px" width="36" height="36"/>
+        <image name="ic_tag_faces_white_48pt" width="48" height="48"/>
+        <image name="ic_warning_white_48pt" width="48" height="48"/>
     </resources>
 </document>
