@@ -37,9 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     fileprivate func setUpNormalRootViewController() {
-        let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FODMAPer") as UIViewController
+        let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FODMAPer")
         window?.rootViewController = viewController
-        
     }
     
     fileprivate func handleOnboardingCompletion() {

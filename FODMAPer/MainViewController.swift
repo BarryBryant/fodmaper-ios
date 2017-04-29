@@ -25,7 +25,6 @@ final class MainViewController: UIViewController {
     @IBOutlet var backButtonPlaceholders: [UIButton]!
     @IBOutlet var navigationBarConstraint: NSLayoutConstraint!
     @IBOutlet var navigationBarLabel: UILabel!
-    @IBOutlet var navigationBarInfoButton: UIButton!
     @IBOutlet var navigationBarBackButtonPlaceholder: UIButton!
 
     fileprivate var sectionContainers: [UIView]! {
@@ -64,10 +63,6 @@ final class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard selectedPage != .none else { return }
-        if selectedPage == .info {
-            animateFromInfo()
-            return
-        }
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.animateFromSelectedPage(page: self.selectedPage)
         }
@@ -98,7 +93,6 @@ final class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
             self.navigationBarLabel.alpha = 1.0
-            self.navigationBarInfoButton.alpha = 1.0
         }
     }
 
@@ -107,7 +101,6 @@ final class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
             self.navigationBarLabel.alpha = 0.0
-            self.navigationBarInfoButton.alpha = 0.0
         }
     }
 
@@ -142,7 +135,7 @@ final class MainViewController: UIViewController {
     }
 
     fileprivate func generateConstraints() {
-        containerHeight = (mainContainerView.bounds.height - 64) / 4
+        containerHeight = (mainContainerView.bounds.height - 113) / 4
         infoContainerHeight = (mainContainerView.bounds.height - 64) / 3
         
         searchHeight = NSLayoutConstraint(item: searchAllContainer,
@@ -180,76 +173,6 @@ final class MainViewController: UIViewController {
                                               multiplier: 1.0,
                                               constant: containerHeight)
         highFodmapContainer.addConstraint(highFodmapHeight)
-    }
-    
-    
-    @IBAction func onPressInfo(_ sender: AnyObject) {
-        selectedPage = .info
-        animateToInfo()
-    }
-    
-    fileprivate func animateToInfo() {
-        searchHeight.constant = infoContainerHeight
-        lowFodmapHeight.constant = infoContainerHeight
-        moderateFodmapHeight.constant = infoContainerHeight
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            self.highFodmapContainer.isHidden = true
-            self.sectionLabels[3].alpha = 0.0
-            self.icons[3].alpha = 0.0
-            self.navigationBarInfoButton.alpha = 0.0
-            self.navigationBarBackButtonPlaceholder.alpha = 1.0
-        }
-        crossDissolve(label: sectionLabels[0], text: "Watch App Introduction")
-        crossDissolve(label: sectionLabels[1], text: "Feedback")
-        crossDissolve(label: sectionLabels[2], text: "Share")
-        crossDissolve(label: navigationBarLabel, text: "FODMAPer Info")
-        
-        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_home_white_48px")!)
-        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_mail_white_48px")!)
-        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_share_white_48px")!)
-    }
-    
-    fileprivate func animateFromInfo() {
-        searchHeight.constant = containerHeight
-        lowFodmapHeight.constant = containerHeight
-        moderateFodmapHeight.constant = containerHeight
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-            self.highFodmapContainer.isHidden = false
-            self.sectionLabels[3].alpha = 1.0
-            self.icons[3].alpha = 1.0
-            self.navigationBarInfoButton.alpha = 1.0
-            self.navigationBarBackButtonPlaceholder.alpha = 0.0
-        }
-        crossDissolve(label: sectionLabels[0], text: "Search All")
-        crossDissolve(label: sectionLabels[1], text: "Low FODMAP")
-        crossDissolve(label: sectionLabels[2], text: "Moderate FODMAP")
-        crossDissolve(label: navigationBarLabel, text: "FODMAPer")
-        
-        crossDissolveImage(imageView: icons[0], image: UIImage(named: "ic_search_white_48pt")!)
-        crossDissolveImage(imageView: icons[1], image: UIImage(named: "ic_tag_faces_white_48pt")!)
-        crossDissolveImage(imageView: icons[2], image: UIImage(named: "ic_warning_white_48pt")!)
-    }
-    
-    fileprivate func crossDissolve(label: UILabel, text: String) {
-        UIView.transition(with: label,
-                          duration: 0.3,
-                          options: [.transitionCrossDissolve],
-                          animations: {
-                            
-                            label.text = text
-            }, completion: nil)
-    }
-    
-    fileprivate func crossDissolveImage(imageView: UIImageView, image: UIImage) {
-        UIView.transition(with: imageView,
-                          duration: 0.3,
-                          options: [.transitionCrossDissolve],
-                          animations: {
-                            
-                            imageView.image = image
-            }, completion: nil)
     }
 
 }

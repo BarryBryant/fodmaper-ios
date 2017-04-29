@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VhB-s7-zox">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G92-Z0-Dzl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,11 +22,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WX7-TA-LYC">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiJ-cM-p9f">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="569" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="vsl-U9-VWs"/>
@@ -119,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="915" y="-633"/>
         </scene>
-        <!--Info View Controller-->
+        <!--Info-->
         <scene sceneID="zI4-q5-VUW">
             <objects>
                 <viewController storyboardIdentifier="InfoViewController" id="uje-6T-oYb" customClass="InfoViewController" customModule="FODMAPer" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,35 +140,22 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-Tk-Bgs">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="7z0-kQ-Cif"/>
-                                            <constraint firstAttribute="height" constant="44" id="ucq-xg-aw6"/>
-                                        </constraints>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76808488368988037" green="0.49774348735809326" blue="0.85612094402313232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2Y9-CX-aDe"/>
                                     <constraint firstItem="21m-pm-sYS" firstAttribute="centerX" secondItem="TPs-R9-P5U" secondAttribute="centerX" id="5H2-7s-56q"/>
-                                    <constraint firstItem="1fG-Tk-Bgs" firstAttribute="centerY" secondItem="TPs-R9-P5U" secondAttribute="centerY" id="7uh-o5-SIO"/>
                                     <constraint firstItem="21m-pm-sYS" firstAttribute="centerY" secondItem="TPs-R9-P5U" secondAttribute="centerY" id="EnJ-5V-XlU"/>
-                                    <constraint firstItem="1fG-Tk-Bgs" firstAttribute="leading" secondItem="TPs-R9-P5U" secondAttribute="leading" id="wru-Sh-6zU"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-CB-SpV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWM-71-68T">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-nA-veW" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                                 <color key="backgroundColor" red="0.48566901680000002" green="0.92397969960000004" blue="0.93132472040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="searchAllPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="rch-kE-MKl"/>
@@ -176,16 +163,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-h0-3af">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="201"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="184.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch App Introduction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djh-cw-Wph">
-                                                        <rect key="frame" x="0.0" y="91" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="82.5" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="Cp9-uw-IMc">
-                                                        <rect key="frame" x="267" y="77" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="68.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="K2J-4m-uZf"/>
@@ -215,10 +202,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baK-7W-kpp">
-                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTl-sL-8e0" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
                                                 <color key="backgroundColor" red="0.69711035489999995" green="0.86673587559999998" blue="0.47011822460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="lowFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="LzA-xq-JCi"/>
@@ -226,16 +213,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-t7-De1">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="201"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="185"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-3j-x0q">
-                                                        <rect key="frame" x="0.0" y="90.5" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="82.5" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mail_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="4dI-n8-UOW">
-                                                        <rect key="frame" x="267" y="76.5" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="68.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="5jJ-Fc-7gL"/>
@@ -265,10 +252,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hc-xW-RXl">
-                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR3-Ab-9lJ" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                                 <color key="backgroundColor" red="0.95215135809999996" green="0.73490947480000002" blue="0.44746440650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="moderateFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="PdZ-9z-z6q"/>
@@ -276,16 +263,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2b-Nv-Ft2">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="201"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="184.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWO-Kr-D9e">
-                                                        <rect key="frame" x="0.0" y="90.5" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="82" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_share_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="v8r-oZ-dj0">
-                                                        <rect key="frame" x="267" y="76.5" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="68" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="I3S-TT-8cH"/>
@@ -328,26 +315,19 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TPs-R9-P5U" secondAttribute="trailing" id="31M-SA-xiz"/>
-                            <constraint firstAttribute="bottom" secondItem="jFz-CB-SpV" secondAttribute="bottom" id="B7U-Z9-C73"/>
                             <constraint firstAttribute="trailing" secondItem="jFz-CB-SpV" secondAttribute="trailing" id="H7E-Uy-jJP"/>
                             <constraint firstItem="TPs-R9-P5U" firstAttribute="top" secondItem="ntj-aA-CsK" secondAttribute="bottom" id="TRn-z2-eWB"/>
                             <constraint firstItem="jFz-CB-SpV" firstAttribute="leading" secondItem="Saq-pN-bIN" secondAttribute="leading" id="X5z-t7-nr8"/>
+                            <constraint firstAttribute="bottom" secondItem="jFz-CB-SpV" secondAttribute="bottom" constant="49" id="bcC-XR-qZM"/>
                             <constraint firstItem="TPs-R9-P5U" firstAttribute="leading" secondItem="Saq-pN-bIN" secondAttribute="leading" id="f49-yJ-BNQ"/>
                             <constraint firstItem="jFz-CB-SpV" firstAttribute="top" secondItem="TPs-R9-P5U" secondAttribute="bottom" id="m6k-qj-3pY"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="HWJ-6m-bIV"/>
                     <connections>
-                        <outlet property="backButton" destination="1fG-Tk-Bgs" id="4af-zf-ccs"/>
-                        <outlet property="containerView" destination="Saq-pN-bIN" id="XWY-Po-VmE"/>
                         <outletCollection property="mainViewContainers" destination="hYC-h0-3af" collectionClass="NSMutableArray" id="qVp-pu-o64"/>
                         <outletCollection property="mainViewContainers" destination="xBp-t7-De1" collectionClass="NSMutableArray" id="ctX-WU-crU"/>
                         <outletCollection property="mainViewContainers" destination="o2b-Nv-Ft2" collectionClass="NSMutableArray" id="FkP-PJ-yDt"/>
-                        <outletCollection property="icons" destination="Cp9-uw-IMc" collectionClass="NSMutableArray" id="hvW-dv-AiY"/>
-                        <outletCollection property="icons" destination="4dI-n8-UOW" collectionClass="NSMutableArray" id="mRx-wU-RG4"/>
-                        <outletCollection property="icons" destination="v8r-oZ-dj0" collectionClass="NSMutableArray" id="ui0-9r-0rD"/>
-                        <outletCollection property="labels" destination="Djh-cw-Wph" collectionClass="NSMutableArray" id="gvd-IN-56q"/>
-                        <outletCollection property="labels" destination="CGd-3j-x0q" collectionClass="NSMutableArray" id="alq-UE-LrL"/>
-                        <outletCollection property="labels" destination="NWO-Kr-D9e" collectionClass="NSMutableArray" id="xAd-9x-1pa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVR-YK-Mc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,7 +425,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jr1-l8-J0f">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-Si-MS5">
@@ -523,7 +503,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T0q-m0-xc9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn5-7c-CgA">
@@ -580,28 +560,28 @@
             </objects>
             <point key="canvasLocation" x="915" y="113"/>
         </scene>
-        <!--Introduction View Controller-->
-        <scene sceneID="2cu-8L-2dH">
+        <!--Tab Bar Controller-->
+        <scene sceneID="S9q-zL-IjZ">
             <objects>
-                <viewController id="VhB-s7-zox" customClass="IntroductionViewController" customModule="FODMAPer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="axb-FS-EZ2"/>
-                        <viewControllerLayoutGuide type="bottom" id="dkd-vT-V2j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fhW-tY-TO5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YZ0-cc-vqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="FODMAPer" id="G92-Z0-Dzl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="a7b-FV-VmO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HiH-AP-IOx" kind="relationship" relationship="viewControllers" id="i8a-b3-DQM"/>
+                        <segue destination="uje-6T-oYb" kind="relationship" relationship="viewControllers" id="wjh-bF-Mwk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9He-5f-sPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2180" y="-333"/>
+            <point key="canvasLocation" x="-2436" y="-358"/>
         </scene>
         <!--FODMAPer-->
         <scene sceneID="aez-gw-JoU">
             <objects>
-                <viewController storyboardIdentifier="FODMAPer" title="FODMAPer" extendedLayoutIncludesOpaqueBars="YES" id="HiH-AP-IOx" customClass="MainViewController" customModule="FODMAPer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FODMAPer" extendedLayoutIncludesOpaqueBars="YES" id="HiH-AP-IOx" customClass="MainViewController" customModule="FODMAPer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gjl-fL-qld"/>
                         <viewControllerLayoutGuide type="bottom" id="TCO-2T-vxf"/>
@@ -611,13 +591,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-Ry-OcG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-h2-gEG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-H1-wBq" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                                 <color key="backgroundColor" red="0.48627450980392156" green="0.92549019607843142" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="searchAllPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="7vz-4L-gTX"/>
@@ -625,16 +605,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cE1-oW-drX">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="151"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="138.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-q0-yeX">
-                                                        <rect key="frame" x="0.0" y="65" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="59" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="hws-rp-MOi">
-                                                        <rect key="frame" x="267" y="51.5" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="45.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="GOy-XP-he0"/>
@@ -651,7 +631,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTt-5w-fXw">
-                                                <rect key="frame" x="0.0" y="53.5" width="42" height="44"/>
+                                                <rect key="frame" x="0.0" y="47.5" width="42" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="5Wf-ke-Aie"/>
                                                     <constraint firstAttribute="height" constant="44" id="eAX-rl-eTD"/>
@@ -678,10 +658,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAi-T3-NUN">
-                                        <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="375" height="138.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-08-cLO" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                                 <color key="backgroundColor" red="0.69803921568627447" green="0.8666666666666667" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="lowFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="fAJ-lq-HeY"/>
@@ -689,16 +669,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-lg-30f">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="150.5"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="138.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low FODMAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dR-EM-xOa">
-                                                        <rect key="frame" x="0.0" y="65" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="59.5" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_faces_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="ETa-9F-uun">
-                                                        <rect key="frame" x="267" y="51" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="45.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="fzY-uv-50Q"/>
@@ -715,7 +695,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntO-AK-Chn">
-                                                <rect key="frame" x="0.0" y="53" width="42" height="44"/>
+                                                <rect key="frame" x="0.0" y="47.5" width="42" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="BPL-a0-4R4"/>
                                                     <constraint firstAttribute="width" constant="42" id="H2s-Rz-ZCk"/>
@@ -741,10 +721,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXl-uv-HSP">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="151"/>
+                                        <rect key="frame" x="0.0" y="277" width="375" height="138.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-yI-rky" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                                 <color key="backgroundColor" red="0.95215135812759399" green="0.73490947484970093" blue="0.44746440649032593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="moderateFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="iah-fy-45p"/>
@@ -752,16 +732,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-YE-Kt9">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="151"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="138.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate FODMAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blg-VL-6O5">
-                                                        <rect key="frame" x="0.0" y="65" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="59" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_warning_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="98h-Fy-nrp">
-                                                        <rect key="frame" x="267" y="51.5" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="45.5" width="48" height="48"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="Exc-f1-t7Z"/>
@@ -778,7 +758,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At6-Ag-F94">
-                                                <rect key="frame" x="0.0" y="53.5" width="42" height="44"/>
+                                                <rect key="frame" x="0.0" y="47.5" width="42" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="HwO-CF-eFQ"/>
                                                     <constraint firstAttribute="width" constant="42" id="nzd-3O-i2v"/>
@@ -804,10 +784,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3p-lS-2u4">
-                                        <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="375" height="138.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-89-Dcj" customClass="HomeScreenButton" customModule="FODMAPer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                                 <color key="backgroundColor" red="1" green="0.51764705882352935" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="highFodmapPressed:" destination="HiH-AP-IOx" eventType="touchUpInside" id="VYE-or-Jdh"/>
@@ -815,16 +795,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-FJ-geP">
-                                                <rect key="frame" x="30" y="0.0" width="315" height="150.5"/>
+                                                <rect key="frame" x="30" y="0.0" width="315" height="138.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High FODMAP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hju-Jt-SzY">
-                                                        <rect key="frame" x="0.0" y="65" width="315" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="59.5" width="315" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_error_outline_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-PI-TeO">
-                                                        <rect key="frame" x="267" y="51" width="48" height="48"/>
+                                                        <rect key="frame" x="267" y="45.5" width="48" height="48"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="6MO-5c-P3z"/>
@@ -841,7 +821,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpL-ot-awh">
-                                                <rect key="frame" x="0.0" y="53" width="42" height="44"/>
+                                                <rect key="frame" x="0.0" y="47.5" width="42" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="ant-wR-eoE"/>
                                                     <constraint firstAttribute="height" constant="44" id="oFb-e8-DSA"/>
@@ -887,19 +867,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzp-ge-tbg">
-                                        <rect key="frame" x="343" y="10" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="cZW-M7-BS6"/>
-                                            <constraint firstAttribute="height" constant="24" id="j2h-t1-B6H"/>
-                                        </constraints>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_info_outline_white_48pt"/>
-                                        <connections>
-                                            <action selector="onPressInfo:" destination="HiH-AP-IOx" eventType="touchUpInside" id="zxJ-oK-ee7"/>
-                                            <segue destination="uje-6T-oYb" kind="show" id="syH-Op-HYi"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c6-yE-1pa">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
                                         <constraints>
@@ -915,14 +882,10 @@
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.49803921568627452" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5Xe-13-ufF"/>
-                                    <constraint firstAttribute="bottom" secondItem="kzp-ge-tbg" secondAttribute="bottom" constant="10" id="BAD-Gp-Ffo"/>
-                                    <constraint firstItem="kzp-ge-tbg" firstAttribute="centerY" secondItem="CY5-1H-gx9" secondAttribute="centerY" id="JSu-PS-j24"/>
                                     <constraint firstItem="2c6-yE-1pa" firstAttribute="leading" secondItem="CY5-1H-gx9" secondAttribute="leading" id="L13-hM-Mef"/>
                                     <constraint firstItem="2c6-yE-1pa" firstAttribute="top" secondItem="CY5-1H-gx9" secondAttribute="top" id="Mge-zH-0NA"/>
                                     <constraint firstAttribute="bottom" secondItem="2c6-yE-1pa" secondAttribute="bottom" id="R8J-DD-atp"/>
                                     <constraint firstItem="Vlo-zN-BFQ" firstAttribute="centerY" secondItem="CY5-1H-gx9" secondAttribute="centerY" id="YOE-CW-CCn"/>
-                                    <constraint firstAttribute="trailing" secondItem="kzp-ge-tbg" secondAttribute="trailing" constant="8" id="iMm-6K-wX5"/>
-                                    <constraint firstItem="kzp-ge-tbg" firstAttribute="top" secondItem="CY5-1H-gx9" secondAttribute="top" constant="10" id="jNZ-LT-ev9"/>
                                     <constraint firstItem="Vlo-zN-BFQ" firstAttribute="centerX" secondItem="CY5-1H-gx9" secondAttribute="centerX" id="uwV-wu-1hs"/>
                                 </constraints>
                             </view>
@@ -935,9 +898,9 @@
                             <constraint firstAttribute="trailing" secondItem="CY5-1H-gx9" secondAttribute="trailing" id="Rde-Dm-RaQ"/>
                             <constraint firstItem="hKi-Ry-OcG" firstAttribute="top" secondItem="CY5-1H-gx9" secondAttribute="bottom" id="dLs-v6-48m"/>
                             <constraint firstItem="hKi-Ry-OcG" firstAttribute="leading" secondItem="QhT-aF-fg9" secondAttribute="leading" id="lDf-tV-uBR"/>
-                            <constraint firstItem="TCO-2T-vxf" firstAttribute="top" secondItem="hKi-Ry-OcG" secondAttribute="bottom" placeholder="YES" id="mWx-AV-QjB"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Guide" image="ic_clear_white_48pt" id="xee-tA-8TC"/>
                     <navigationItem key="navigationItem" id="Sjw-2L-oE9"/>
                     <connections>
                         <outlet property="highFodmapContainer" destination="k3p-lS-2u4" id="6HD-Im-qpK"/>
@@ -946,7 +909,6 @@
                         <outlet property="moderateFodmapContainer" destination="oXl-uv-HSP" id="iVn-mk-3fo"/>
                         <outlet property="navigationBarBackButtonPlaceholder" destination="2c6-yE-1pa" id="659-LI-8HS"/>
                         <outlet property="navigationBarConstraint" destination="5Xe-13-ufF" id="P7F-nY-yIV"/>
-                        <outlet property="navigationBarInfoButton" destination="kzp-ge-tbg" id="9Hj-Yt-26B"/>
                         <outlet property="navigationBarLabel" destination="Vlo-zN-BFQ" id="eNA-kz-gWy"/>
                         <outlet property="searchAllContainer" destination="gfn-h2-gEG" id="Pji-bK-hNj"/>
                         <outlet property="sectionStackView" destination="hKi-Ry-OcG" id="dbf-JP-xIv"/>
@@ -982,9 +944,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_clear_white_48pt" width="48" height="48"/>
         <image name="ic_error_outline_white_48pt" width="48" height="48"/>
         <image name="ic_home_white_48px" width="36" height="36"/>
-        <image name="ic_info_outline_white_48pt" width="48" height="48"/>
         <image name="ic_keyboard_arrow_left_white_48pt" width="48" height="48"/>
         <image name="ic_mail_white_48px" width="36" height="36"/>
         <image name="ic_search_white_48pt" width="48" height="48"/>
