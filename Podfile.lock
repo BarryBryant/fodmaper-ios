@@ -1,12 +1,15 @@
 PODS:
+  - JTAppleCalendar (7.0.1)
   - Onboard (2.3.1)
 
 DEPENDENCIES:
+  - JTAppleCalendar (~> 7.0)
   - Onboard
 
 SPEC CHECKSUMS:
+  JTAppleCalendar: 7c8cba3e06fd6fdfed72382eeeb87c304e727ddb
   Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
 
-PODFILE CHECKSUM: 4c2cc9cf773075bdd481780c705fdb44a299544a
+PODFILE CHECKSUM: 0aebe0798bc2ab7494405d106e719f52aa9af859
 
 COCOAPODS: 1.1.1

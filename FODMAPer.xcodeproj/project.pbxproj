@@ -18,6 +18,9 @@
 		2743C4C01E3BE02D00C8BFEF /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */; };
 		2743C4C21E3BE5B000C8BFEF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */; };
 		274E005D1EAAF338004708F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274E005C1EAAF338004708F0 /* Assets.xcassets */; };
+		2762404B1EB56493005DE5FB /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762404A1EB56493005DE5FB /* DiaryViewController.swift */; };
+		2762404F1EB631E7005DE5FB /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762404E1EB631E7005DE5FB /* CalendarCell.swift */; };
+		276240511EB63403005DE5FB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240501EB63403005DE5FB /* CalendarViewController.swift */; };
 		2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */; };
 		279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */; };
 		279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535ED1E25E07900B24655 /* HighFodmapViewController.swift */; };
@@ -64,6 +67,9 @@
 		2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		2743C4C11E3BE5B000C8BFEF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		274E005C1EAAF338004708F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2762404A1EB56493005DE5FB /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		2762404E1EB631E7005DE5FB /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		276240501EB63403005DE5FB /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		279535ED1E25E07900B24655 /* HighFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFodmapViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				2743C4BF1E3BE02D00C8BFEF /* HomeScreenButton.swift */,
 				27B0799D1E21DE8700641AE7 /* FoodCell.swift */,
 				2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */,
+				2762404A1EB56493005DE5FB /* DiaryViewController.swift */,
+				2762404E1EB631E7005DE5FB /* CalendarCell.swift */,
+				276240501EB63403005DE5FB /* CalendarViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -436,6 +445,7 @@
 			files = (
 				14FD7AFF1E1B254F00A09D9E /* LowFodmapViewController.swift in Sources */,
 				2743C4C01E3BE02D00C8BFEF /* HomeScreenButton.swift in Sources */,
+				2762404B1EB56493005DE5FB /* DiaryViewController.swift in Sources */,
 				14FD7AD71E19F93600A09D9E /* AppDelegate.swift in Sources */,
 				27B079981E21A94E00641AE7 /* FoodSerialization.swift in Sources */,
 				2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */,
@@ -445,6 +455,7 @@
 				279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */,
 				27DB8ED01E3E511800ECF10D /* FadeInTitleBarViewController.swift in Sources */,
 				14FD7B041E1B300100A09D9E /* ImageHelpers.swift in Sources */,
+				276240511EB63403005DE5FB /* CalendarViewController.swift in Sources */,
 				27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */,
 				27B0799A1E21D93800641AE7 /* FoodRepository.swift in Sources */,
 				279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */,
@@ -452,6 +463,7 @@
 				2743C4C21E3BE5B000C8BFEF /* MainViewController.swift in Sources */,
 				14FD7B071E1F197B00A09D9E /* Food.swift in Sources */,
 				279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */,
+				2762404F1EB631E7005DE5FB /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

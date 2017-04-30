@@ -7,6 +7,7 @@ target 'FODMAPer' do
 
   # Pods for FODMAPer
   pod 'Onboard'
+  pod 'JTAppleCalendar', '~> 7.0'
   target 'FODMAPerTests' do
     inherit! :search_paths
     # Pods for testing
