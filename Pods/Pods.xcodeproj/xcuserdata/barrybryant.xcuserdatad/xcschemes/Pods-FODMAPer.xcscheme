@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E621E15C61C9BA4D2C966A0D3B55E32"
+               BlueprintIdentifier = "603FA96ABC73F54686283EA3EA68617E"
                BuildableName = "Pods_FODMAPer.framework"
                BlueprintName = "Pods-FODMAPer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E621E15C61C9BA4D2C966A0D3B55E32"
+            BlueprintIdentifier = "603FA96ABC73F54686283EA3EA68617E"
             BuildableName = "Pods_FODMAPer.framework"
             BlueprintName = "Pods-FODMAPer"
             ReferencedContainer = "container:Pods.xcodeproj">
