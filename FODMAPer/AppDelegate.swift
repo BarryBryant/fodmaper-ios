@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Onboard
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.statusBarStyle = .lightContent;
+        
         window.makeKeyAndVisible()
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
         return true;
     }
     

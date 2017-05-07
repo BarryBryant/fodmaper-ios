@@ -8,6 +8,8 @@
 
 import UIKit
 import JTAppleCalendar
+import Realm
+import RealmSwift
 
 class CalendarViewController: UIViewController {
     
@@ -17,8 +19,13 @@ class CalendarViewController: UIViewController {
     
     let formatter = DateFormatter()
     
+    let repo: DiaryRepository? = DiaryRepository()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard repo != nil else {
+            return //show error
+        }
         setUpCalendar()
     }
     
@@ -37,6 +44,30 @@ class CalendarViewController: UIViewController {
                               completionHandler: nil)
         
         calendar.selectDates(from: currentDate, to: currentDate)
+    }
+    
+    @IBAction func didTapSelect(_ sender: Any) {
+        let entry = DiaryEntry()
+        let date = calendar.selectedDates.first
+        entry.build(for: date!, symptomSeverity: 3)
+        try? repo?.storeDiaryEntry(entry: entry)
+        calendar.reloadData()
+    }
+    
+}
+
+extension CalendarViewController {
+    
+    func configureCalendarLabels(with date: Date) {
+        let calendar
+            = Calendar.current
+        
+        let monthNumber = calendar.component(.month, from: date)
+        let month = calendar.monthSymbols[monthNumber-1]
+        monthLabel.text = month
+        
+        let year = calendar.component(.year, from: date)
+        yearLabel.text = "\(year)"
     }
     
 }
@@ -66,37 +97,25 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarCell", for: indexPath) as! CalendarCell
-        cell.configure(with: cellState)
+        let entry = repo?.getDiaryEntryForDate(date)
+        cell.configure(with: cellState, entry: entry)
+        if cellState.isSelected { cell.didSelect() }
         return cell
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let cell = cell as? CalendarCell else { return }
-        cell.viewDecoration.isHidden = false
+        cell.didSelect()
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let cell = cell as? CalendarCell else { return }
-        cell.viewDecoration.isHidden = true
+        cell.didDeselect()
     }
     
 }
 
-extension CalendarViewController {
-    
-    func configureCalendarLabels(with date: Date) {
-        let calendar
-            = Calendar.current
-        
-        let monthNumber = calendar.component(.month, from: date)
-        let month = calendar.monthSymbols[monthNumber-1]
-        monthLabel.text = month
-        
-        let year = calendar.component(.year, from: date)
-        yearLabel.text = "\(year)"
-    }
-    
-}
+
 
 
 

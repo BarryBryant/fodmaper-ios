@@ -683,7 +683,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="142"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-Yn-kNv">
+                                                        <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-Yn-kNv">
                                                             <rect key="frame" x="73.666666666666671" y="51" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.69899219274520874" green="0.45160847902297974" blue="0.77806729078292847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -740,6 +740,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapSelect:" destination="8wY-IA-6UG" eventType="touchUpInside" id="Ese-Lq-hhG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

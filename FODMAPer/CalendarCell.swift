@@ -14,7 +14,9 @@ class CalendarCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var viewDecoration: UIView!
     
-    func configure(with state: CellState) {
+    var emptyEntry = true
+    
+    func configure(with state: CellState, entry: DiaryEntry?) {
         dateLabel.text = state.text
         
         if state.dateBelongsTo == .thisMonth {
@@ -23,11 +25,34 @@ class CalendarCell: JTAppleCell {
             dateLabel.textColor = UIColor.gray
         }
         
-        if state.isSelected {
-            viewDecoration.isHidden = false
-        } else {
-            viewDecoration.isHidden = true
-        }
+        emptyEntry = entry == nil
+        viewDecoration.backgroundColor = colorForEntry(for: entry)
+        didDeselect()
     }
     
+    func didSelect() {
+        viewDecoration.isHidden = false
+        viewDecoration.alpha = 1.0
+    }
+    
+    func didDeselect() {
+        viewDecoration.isHidden = emptyEntry
+        viewDecoration.alpha = 0.5
+    }
+    
+    private func colorForEntry(for entry: DiaryEntry?) -> UIColor {
+        guard let entry = entry
+        else {
+            return UIColor.lightGray
+        }
+        
+        switch entry.severity {
+        case .mild:
+            return UIColor.fodmaperGreen()
+        case .moderate:
+            return UIColor.fodmaperOrange()
+        case .severe:
+            return UIColor.fodmaperRed()
+        }
+    }
 }

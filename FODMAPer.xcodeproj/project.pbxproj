@@ -21,6 +21,9 @@
 		2762404B1EB56493005DE5FB /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762404A1EB56493005DE5FB /* DiaryViewController.swift */; };
 		2762404F1EB631E7005DE5FB /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762404E1EB631E7005DE5FB /* CalendarCell.swift */; };
 		276240511EB63403005DE5FB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240501EB63403005DE5FB /* CalendarViewController.swift */; };
+		2762407D1EBE21C0005DE5FB /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762407C1EBE21C0005DE5FB /* ColorExtensions.swift */; };
+		276240821EBE8D09005DE5FB /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240811EBE8D09005DE5FB /* DiaryRepository.swift */; };
+		276240841EBE8EC5005DE5FB /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240831EBE8EC5005DE5FB /* DiaryEntry.swift */; };
 		2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */; };
 		279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */; };
 		279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535ED1E25E07900B24655 /* HighFodmapViewController.swift */; };
@@ -70,6 +73,9 @@
 		2762404A1EB56493005DE5FB /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		2762404E1EB631E7005DE5FB /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		276240501EB63403005DE5FB /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2762407C1EBE21C0005DE5FB /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		276240811EBE8D09005DE5FB /* DiaryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
+		276240831EBE8EC5005DE5FB /* DiaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
 		2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		279535ED1E25E07900B24655 /* HighFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFodmapViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				2762404A1EB56493005DE5FB /* DiaryViewController.swift */,
 				2762404E1EB631E7005DE5FB /* CalendarCell.swift */,
 				276240501EB63403005DE5FB /* CalendarViewController.swift */,
+				2762407C1EBE21C0005DE5FB /* ColorExtensions.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 			children = (
 				27B079991E21D93800641AE7 /* FoodRepository.swift */,
 				14FD7B061E1F197B00A09D9E /* Food.swift */,
+				276240811EBE8D09005DE5FB /* DiaryRepository.swift */,
+				276240831EBE8EC5005DE5FB /* DiaryEntry.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,7 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E53D822714EDD409B603A356 /* [CP] Copy Pods Resources */ = {
@@ -433,7 +442,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -454,6 +463,7 @@
 				27B0799E1E21DE8700641AE7 /* FoodCell.swift in Sources */,
 				279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */,
 				27DB8ED01E3E511800ECF10D /* FadeInTitleBarViewController.swift in Sources */,
+				2762407D1EBE21C0005DE5FB /* ColorExtensions.swift in Sources */,
 				14FD7B041E1B300100A09D9E /* ImageHelpers.swift in Sources */,
 				276240511EB63403005DE5FB /* CalendarViewController.swift in Sources */,
 				27B079941E21672C00641AE7 /* FodmaperError.swift in Sources */,
@@ -464,6 +474,8 @@
 				14FD7B071E1F197B00A09D9E /* Food.swift in Sources */,
 				279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */,
 				2762404F1EB631E7005DE5FB /* CalendarCell.swift in Sources */,
+				276240841EBE8EC5005DE5FB /* DiaryEntry.swift in Sources */,
+				276240821EBE8D09005DE5FB /* DiaryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
