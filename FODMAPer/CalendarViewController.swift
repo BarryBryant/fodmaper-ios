@@ -16,6 +16,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendar: JTAppleCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var diaryButton: UIButton!
     
     let formatter = DateFormatter()
     
@@ -47,11 +48,9 @@ class CalendarViewController: UIViewController {
     }
     
     @IBAction func didTapSelect(_ sender: Any) {
-        let entry = DiaryEntry()
-        let date = calendar.selectedDates.first
-        entry.build(for: date!, symptomSeverity: 3)
-        try? repo?.storeDiaryEntry(entry: entry)
-        calendar.reloadData()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let diaryEntryViewController = storyboard.instantiateViewController(withIdentifier: "DiaryEntry")
+        present(diaryEntryViewController, animated: true, completion: nil)
     }
     
 }
@@ -106,11 +105,13 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let cell = cell as? CalendarCell else { return }
         cell.didSelect()
+        let title = cell.emptyEntry ? "New Entry" : "Edit Entry"
+        diaryButton.setTitle(title, for: .normal)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let cell = cell as? CalendarCell else { return }
-        cell.didDeselect()
+        cell.didDeselect(state: cellState)
     }
     
 }
