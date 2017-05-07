@@ -30,6 +30,11 @@ class CalendarViewController: UIViewController {
         setUpCalendar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        calendar.reloadData()
+    }
+    
     func setUpCalendar() {
         calendar.minimumLineSpacing = 0
         calendar.minimumInteritemSpacing = 0
@@ -49,8 +54,19 @@ class CalendarViewController: UIViewController {
     
     @IBAction func didTapSelect(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let diaryEntryViewController = storyboard.instantiateViewController(withIdentifier: "DiaryEntry")
-        present(diaryEntryViewController, animated: true, completion: nil)
+        let diaryEntryViewController = storyboard.instantiateViewController(withIdentifier: "DiaryEntry") as? DiaryEntryViewController
+        
+        let selectedDate = calendar.selectedDates.first!
+        
+        if let entry = repo?.getDiaryEntryForDate(selectedDate) {
+            diaryEntryViewController?.injectEntry(entry: entry)
+        } else {
+            let entry = DiaryEntry()
+            entry.build(for: selectedDate)
+            diaryEntryViewController?.injectEntry(entry: entry)
+        }
+        
+        present(diaryEntryViewController!, animated: true, completion: nil)
     }
     
 }

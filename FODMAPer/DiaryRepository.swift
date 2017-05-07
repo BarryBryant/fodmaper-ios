@@ -39,7 +39,7 @@ final class DiaryRepository: DiaryStoring {
     
     func storeDiaryEntry(entry: DiaryEntry) throws {
         try realm.write {
-            realm.add(entry)
+            realm.add(entry, update: true)
         }
     }
     

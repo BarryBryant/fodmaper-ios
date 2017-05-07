@@ -17,11 +17,12 @@ public enum SymptomSeverity {
     case severe
     
     init(with int: Int) {
-        if int < 2 {
+        switch int {
+        case 1:
             self = .mild
-        } else if int < 3 {
+        case 2:
             self = .moderate
-        } else {
+        default:
             self = .severe
         }
     }
@@ -37,10 +38,9 @@ public final class DiaryEntry: Object {
         return SymptomSeverity(with: symptomSeverityNumber)
     }
     
-    public func build(for date: Date, symptomSeverity: Int) {
+    public func build(for date: Date) {
         self.date = date
         self.id = DiaryEntry.generateId(from: date)
-        self.symptomSeverityNumber = symptomSeverity
     }
     
     override public static func primaryKey() -> String? {

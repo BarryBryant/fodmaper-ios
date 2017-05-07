@@ -777,10 +777,10 @@
             </objects>
             <point key="canvasLocation" x="-3345" y="-1016.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Diary Entry View Controller-->
         <scene sceneID="Ec6-ba-H6p">
             <objects>
-                <viewController storyboardIdentifier="DiaryEntry" id="dEw-Iw-gpd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryEntry" id="dEw-Iw-gpd" customClass="DiaryEntryViewController" customModule="FODMAPer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ohn-0b-ViS"/>
                         <viewControllerLayoutGuide type="bottom" id="brE-j0-pmS"/>
@@ -924,6 +924,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="didTapSave:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="aWJ-af-7NM"/>
                                     <action selector="didTapSelect:" destination="8wY-IA-6UG" eventType="touchUpInside" id="Fp6-zR-GHM"/>
                                 </connections>
                             </button>
@@ -943,6 +944,9 @@
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapMild:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="zf2-Ze-s95"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIb-0G-jBB">
                                         <rect key="frame" x="102" y="0.0" width="100" height="100"/>
@@ -957,6 +961,9 @@
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapModerate:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="V2v-sc-IxW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tG-3a-cNS">
                                         <rect key="frame" x="204" y="0.0" width="100" height="100"/>
@@ -971,6 +978,9 @@
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapSevere:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="LPp-YL-E8o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1001,6 +1011,12 @@
                             <constraint firstItem="JNY-0Y-CI3" firstAttribute="leading" secondItem="jNk-9b-NF6" secondAttribute="leading" constant="15" id="xOb-HE-hft"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mildButton" destination="VB0-pC-gBU" id="k1T-6v-7Le"/>
+                        <outlet property="moderateButton" destination="sIb-0G-jBB" id="9W0-lR-Wna"/>
+                        <outlet property="saveEntryButton" destination="VIR-4G-L48" id="Nb5-9v-4Oh"/>
+                        <outlet property="severeButton" destination="8tG-3a-cNS" id="6cK-bO-1yr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnr-6K-6ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
