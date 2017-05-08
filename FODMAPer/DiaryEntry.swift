@@ -33,6 +33,11 @@ public final class DiaryEntry: Object {
     dynamic var id = 0
     dynamic var date: Date = Date()
     dynamic var symptomSeverityNumber: Int = 1
+    dynamic var foods: String = ""
+    
+    var foodArray: [String] {
+        return foods.characters.split(separator: ";").map(String.init)
+    }
     
     var severity: SymptomSeverity {
         return SymptomSeverity(with: symptomSeverityNumber)
@@ -41,6 +46,10 @@ public final class DiaryEntry: Object {
     public func build(for date: Date) {
         self.date = date
         self.id = DiaryEntry.generateId(from: date)
+    }
+    
+    func setFoods(foods: [String]) {
+        self.foods = foods.joined(separator: ";")
     }
     
     override public static func primaryKey() -> String? {

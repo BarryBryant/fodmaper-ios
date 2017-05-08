@@ -27,7 +27,7 @@ class CalendarCell: JTAppleCell {
     func didSelect() {
         dateLabel.textColor = UIColor.white
         viewDecoration.isHidden = false
-        viewDecoration.alpha = 1.0
+        viewDecoration.alpha = 0.5
     }
     
     func didDeselect(state: CellState) {
@@ -38,7 +38,7 @@ class CalendarCell: JTAppleCell {
         }
         
         viewDecoration.isHidden = emptyEntry
-        viewDecoration.alpha = 0.5
+        viewDecoration.alpha = 1.0
     }
     
     private func colorForEntry(for entry: DiaryEntry?) -> UIColor {

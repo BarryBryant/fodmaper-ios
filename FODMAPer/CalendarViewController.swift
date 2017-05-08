@@ -19,7 +19,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var diaryButton: UIButton!
     
     let formatter = DateFormatter()
-    
+    var didInitiallyLoad = false
     let repo: DiaryRepository? = DiaryRepository()
     
     override func viewDidLoad() {
@@ -32,7 +32,12 @@ class CalendarViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        calendar.reloadData()
+        
+        //Reload data if returning from diary entry
+        if didInitiallyLoad {
+            calendar.reloadData()
+        }
+        didInitiallyLoad = true
     }
     
     func setUpCalendar() {

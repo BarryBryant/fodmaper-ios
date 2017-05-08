@@ -24,6 +24,7 @@
 		276240821EBE8D09005DE5FB /* DiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240811EBE8D09005DE5FB /* DiaryRepository.swift */; };
 		276240841EBE8EC5005DE5FB /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240831EBE8EC5005DE5FB /* DiaryEntry.swift */; };
 		276240861EBED364005DE5FB /* DiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240851EBED364005DE5FB /* DiaryEntryViewController.swift */; };
+		276240881EBFAB23005DE5FB /* FoodEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276240871EBFAB23005DE5FB /* FoodEntryCell.swift */; };
 		2762CD2C1E3EDBD700DC69E1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */; };
 		279535EC1E25DF9A00B24655 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */; };
 		279535EE1E25E07900B24655 /* HighFodmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279535ED1E25E07900B24655 /* HighFodmapViewController.swift */; };
@@ -76,6 +77,7 @@
 		276240811EBE8D09005DE5FB /* DiaryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryRepository.swift; sourceTree = "<group>"; };
 		276240831EBE8EC5005DE5FB /* DiaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
 		276240851EBED364005DE5FB /* DiaryEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEntryViewController.swift; sourceTree = "<group>"; };
+		276240871EBFAB23005DE5FB /* FoodEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodEntryCell.swift; sourceTree = "<group>"; };
 		2762CD2B1E3EDBD700DC69E1 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		279535EB1E25DF9A00B24655 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		279535ED1E25E07900B24655 /* HighFodmapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFodmapViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				276240501EB63403005DE5FB /* CalendarViewController.swift */,
 				2762407C1EBE21C0005DE5FB /* ColorExtensions.swift */,
 				276240851EBED364005DE5FB /* DiaryEntryViewController.swift */,
+				276240871EBFAB23005DE5FB /* FoodEntryCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				14FD7B071E1F197B00A09D9E /* Food.swift in Sources */,
 				279535F01E25E3AA00B24655 /* ModerateFodmapViewController.swift in Sources */,
 				2762404F1EB631E7005DE5FB /* CalendarCell.swift in Sources */,
+				276240881EBFAB23005DE5FB /* FoodEntryCell.swift in Sources */,
 				276240841EBE8EC5005DE5FB /* DiaryEntry.swift in Sources */,
 				276240821EBE8D09005DE5FB /* DiaryRepository.swift in Sources */,
 			);
