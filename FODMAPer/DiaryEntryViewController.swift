@@ -14,7 +14,7 @@ class DiaryEntryViewController: UIViewController {
     @IBOutlet weak var moderateButton: UIButton!
     @IBOutlet weak var severeButton: UIButton!
     @IBOutlet weak var saveEntryButton: UIButton!
-    @IBOutlet weak var foodCollection: UICollectionView!
+    @IBOutlet weak var foodTable: UITableView!
     @IBOutlet weak var foodField: UITextField!
     
     var entry: DiaryEntry!
@@ -65,8 +65,9 @@ class DiaryEntryViewController: UIViewController {
         else { return }
         foods.append(text)
         foodField.text = ""
-        foodCollection.reloadData()
-        foodCollection.setNeedsDisplay()
+        foodTable.reloadData()
+        let indexPath = IndexPath(row: foods.count - 1, section: 0)
+        foodTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     private func updateSymptomButtons(for severity: SymptomSeverity) {
@@ -76,27 +77,23 @@ class DiaryEntryViewController: UIViewController {
     }
 }
 
-extension DiaryEntryViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //sup
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        //nm
-    }
+extension DiaryEntryViewController: UITableViewDelegate {
     
     
 }
 
-extension DiaryEntryViewController: UICollectionViewDataSource {
+extension DiaryEntryViewController: UITableViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = foodCollection.dequeueReusableCell(withReuseIdentifier: "FoodEntryCell", for: indexPath) as! FoodEntryCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = foodTable.dequeueReusableCell(withIdentifier: "FoodEntryCell") as! FoodEntryCell
         cell.foodLabel?.text = foods[indexPath.item]
         return cell
     }
