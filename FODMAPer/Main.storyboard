@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G92-Z0-Dzl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G92-Z0-Dzl">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -323,7 +323,7 @@
                             <constraint firstItem="jFz-CB-SpV" firstAttribute="top" secondItem="TPs-R9-P5U" secondAttribute="bottom" id="m6k-qj-3pY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" id="HWJ-6m-bIV"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="ic_info_outline_white" id="HWJ-6m-bIV"/>
                     <connections>
                         <outletCollection property="mainViewContainers" destination="hYC-h0-3af" collectionClass="NSMutableArray" id="qVp-pu-o64"/>
                         <outletCollection property="mainViewContainers" destination="xBp-t7-De1" collectionClass="NSMutableArray" id="ctX-WU-crU"/>
@@ -773,7 +773,7 @@
                             <constraint firstAttribute="trailing" secondItem="fsb-EP-HAU" secondAttribute="trailing" id="bhk-I6-IUR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diary" id="QIJ-TN-YQS"/>
+                    <tabBarItem key="tabBarItem" title="Diary" image="ic_event_white" id="QIJ-TN-YQS"/>
                     <connections>
                         <outlet property="calendar" destination="vc4-6M-gUp" id="7II-Rl-XMQ"/>
                         <outlet property="diaryButton" destination="IXv-2h-9Z8" id="xku-re-bB9"/>
@@ -806,25 +806,20 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIq-s0-QFb">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="hJo-Nx-U3U"/>
-                                            <constraint firstAttribute="height" constant="44" id="qaS-7V-sgh"/>
-                                        </constraints>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="ic_keyboard_arrow_left_white_48pt">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-du-1ED">
+                                        <rect key="frame" x="0.0" y="-2" width="48" height="48"/>
+                                        <state key="normal" backgroundImage="ic_keyboard_arrow_left_white_48pt"/>
+                                        <connections>
+                                            <action selector="didTapBack:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="yrf-Dz-17n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.49803921569999998" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="qIq-s0-QFb" secondAttribute="bottom" id="7Xm-Cg-cIQ"/>
                                     <constraint firstAttribute="height" constant="44" id="7sA-sr-aBc"/>
+                                    <constraint firstItem="9Xx-du-1ED" firstAttribute="centerY" secondItem="BIt-mh-wgs" secondAttribute="centerY" id="JcE-es-SRh"/>
                                     <constraint firstItem="oLj-am-UkB" firstAttribute="centerY" secondItem="BIt-mh-wgs" secondAttribute="centerY" id="Siy-Mi-xr7"/>
-                                    <constraint firstItem="qIq-s0-QFb" firstAttribute="top" secondItem="BIt-mh-wgs" secondAttribute="top" id="eGz-p7-L2p"/>
-                                    <constraint firstItem="qIq-s0-QFb" firstAttribute="leading" secondItem="BIt-mh-wgs" secondAttribute="leading" id="fBv-d8-fow"/>
+                                    <constraint firstItem="9Xx-du-1ED" firstAttribute="leading" secondItem="BIt-mh-wgs" secondAttribute="leading" id="lbs-2V-KDe"/>
                                     <constraint firstItem="oLj-am-UkB" firstAttribute="centerX" secondItem="BIt-mh-wgs" secondAttribute="centerX" id="oDs-FP-m62"/>
                                 </constraints>
                             </view>
@@ -838,13 +833,13 @@
                                 <rect key="frame" x="8" y="495.66666666666663" width="398" height="19.999999999999886"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Entry" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYL-TS-Cio">
-                                        <rect key="frame" x="0.0" y="0.0" width="274" height="19.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="19.999999999999943"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eul-bA-MKI">
-                                        <rect key="frame" x="276" y="0.0" width="60" height="19.999999999999943"/>
+                                        <rect key="frame" x="338" y="0.0" width="60" height="19.999999999999943"/>
                                         <color key="backgroundColor" red="0.48369872570037842" green="0.92495834827423096" blue="0.92830914258956909" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="4xW-Sp-0eX"/>
@@ -861,22 +856,6 @@
                                         <connections>
                                             <action selector="didTapAdd:" destination="dEw-Iw-gpd" eventType="touchUpInside" id="btQ-0W-kwn"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Xs-HGs">
-                                        <rect key="frame" x="338" y="0.0" width="60" height="19.999999999999943"/>
-                                        <color key="backgroundColor" red="0.99965459108352661" green="0.64069730043411255" blue="0.74208420515060425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Ed5-9A-7u5"/>
-                                            <constraint firstAttribute="width" constant="60" id="PTw-Xf-Fht"/>
-                                        </constraints>
-                                        <state key="normal" title="Delete">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -970,28 +949,53 @@
                                 <rect key="frame" x="15" y="120.33333333333331" width="384" height="365.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodEntryCell" id="BvG-FV-MbS" customClass="FoodEntryCell" customModule="FODMAPer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodEntryCell" id="BvG-FV-MbS" customClass="FoodEntryCell" customModule="FODMAPer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BvG-FV-MbS" id="mzt-Ib-QEv">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-YD-4Gi">
-                                                    <rect key="frame" x="0.0" y="-0.33333333333333215" width="384" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-7A-KYk">
+                                                    <rect key="frame" x="5" y="0.0" width="374" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-YD-4Gi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9us-dJ-3YR">
+                                                            <rect key="frame" x="314" y="0.0" width="60" height="30"/>
+                                                            <color key="backgroundColor" red="0.99965459109999999" green="0.64069730039999995" blue="0.74208420519999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="9cU-jk-EOl"/>
+                                                                <constraint firstAttribute="width" constant="60" id="cun-f6-egY"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Delete">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="didTapDelete:" destination="BvG-FV-MbS" eventType="touchUpInside" id="iSz-RF-kjv"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="XAF-YD-4Gi" secondAttribute="bottom" id="1tr-r6-UfI"/>
-                                                <constraint firstItem="XAF-YD-4Gi" firstAttribute="leading" secondItem="mzt-Ib-QEv" secondAttribute="leading" id="VH7-BA-AKc"/>
-                                                <constraint firstAttribute="trailing" secondItem="XAF-YD-4Gi" secondAttribute="trailing" id="aXW-bh-yyi"/>
-                                                <constraint firstItem="XAF-YD-4Gi" firstAttribute="top" secondItem="mzt-Ib-QEv" secondAttribute="top" id="jeZ-MI-kAS"/>
+                                                <constraint firstItem="jnQ-7A-KYk" firstAttribute="top" secondItem="mzt-Ib-QEv" secondAttribute="top" id="2Sg-Ql-HfR"/>
+                                                <constraint firstItem="jnQ-7A-KYk" firstAttribute="leading" secondItem="mzt-Ib-QEv" secondAttribute="leading" constant="5" id="GEu-zj-T8f"/>
+                                                <constraint firstAttribute="bottom" secondItem="jnQ-7A-KYk" secondAttribute="bottom" id="P0B-cc-aDa"/>
+                                                <constraint firstAttribute="trailing" secondItem="jnQ-7A-KYk" secondAttribute="trailing" constant="5" id="qqB-yj-crF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="deleteButton" destination="9us-dJ-3YR" id="6M6-UN-NZ4"/>
                                             <outlet property="foodLabel" destination="XAF-YD-4Gi" id="Z34-YS-pUo"/>
                                         </connections>
                                     </tableViewCell>
@@ -1379,7 +1383,7 @@
                             <constraint firstItem="hKi-Ry-OcG" firstAttribute="leading" secondItem="QhT-aF-fg9" secondAttribute="leading" id="lDf-tV-uBR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guide" image="ic_clear_white_48pt" id="xee-tA-8TC"/>
+                    <tabBarItem key="tabBarItem" title="Guide" image="ic_restaurant_white" id="xee-tA-8TC"/>
                     <navigationItem key="navigationItem" id="Sjw-2L-oE9"/>
                     <connections>
                         <outlet property="highFodmapContainer" destination="k3p-lS-2u4" id="6HD-Im-qpK"/>
@@ -1423,13 +1427,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_clear_white_48pt" width="48" height="48"/>
         <image name="ic_error_outline_white_48pt" width="48" height="48"/>
+        <image name="ic_event_white" width="24" height="24"/>
         <image name="ic_face_white_48pt" width="48" height="48"/>
         <image name="ic_home_white_48px" width="36" height="36"/>
+        <image name="ic_info_outline_white" width="24" height="24"/>
         <image name="ic_keyboard_arrow_left_white_48pt" width="48" height="48"/>
         <image name="ic_mail_white_48px" width="36" height="36"/>
         <image name="ic_mood_bad_white_48pt" width="48" height="48"/>
+        <image name="ic_restaurant_white" width="24" height="24"/>
         <image name="ic_search_white_48pt" width="48" height="48"/>
         <image name="ic_share_white_48px" width="36" height="36"/>
         <image name="ic_tag_faces_white_48pt" width="48" height="48"/>

@@ -21,6 +21,7 @@ class CalendarViewController: UIViewController {
     let formatter = DateFormatter()
     var didInitiallyLoad = false
     let repo: DiaryRepository? = DiaryRepository()
+    var lastSelectedDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,17 @@ class CalendarViewController: UIViewController {
         if didInitiallyLoad {
             calendar.reloadData()
         }
+        
+        if lastSelectedDate != nil {
+            calendar.selectDates(from: lastSelectedDate!, to: lastSelectedDate!)
+        }
+        
         didInitiallyLoad = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.lastSelectedDate = calendar.selectedDates.first!
     }
     
     func setUpCalendar() {

@@ -8,8 +8,31 @@
 
 import UIKit
 
+protocol FoodEntryCellDelegate {
+    
+    func deleteSelectedCell()
+    
+}
+
 class FoodEntryCell: UITableViewCell {
     
-    @IBOutlet weak var foodLabel: UILabel?
+    var delegate: FoodEntryCellDelegate?
+    
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBAction func didTapDelete(_ sender: Any) {
+        delegate?.deleteSelectedCell()
+    }
+    
+    public func setSelected() {
+        foodLabel.textColor = UIColor.fodmaperRed()
+        deleteButton.isHidden = false
+    }
+    
+    public func setDeselected() {
+        foodLabel.textColor = UIColor.black
+        deleteButton.isHidden = true
+    }
 
 }

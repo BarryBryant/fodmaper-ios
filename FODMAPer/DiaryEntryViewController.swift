@@ -70,6 +70,10 @@ class DiaryEntryViewController: UIViewController {
         foodTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
+    @IBAction func didTapBack(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     private func updateSymptomButtons(for severity: SymptomSeverity) {
         mildButton.alpha = severity == .mild ? 1.0: 0.5
         moderateButton.alpha = severity == .moderate ? 1.0: 0.5
@@ -79,6 +83,15 @@ class DiaryEntryViewController: UIViewController {
 
 extension DiaryEntryViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = foodTable.cellForRow(at: indexPath) as? FoodEntryCell
+        cell?.setSelected()
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = foodTable.cellForRow(at: indexPath) as? FoodEntryCell
+        cell?.setDeselected()
+    }
     
 }
 
@@ -95,7 +108,23 @@ extension DiaryEntryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = foodTable.dequeueReusableCell(withIdentifier: "FoodEntryCell") as! FoodEntryCell
         cell.foodLabel?.text = foods[indexPath.item]
+        cell.delegate = self
+        if cell.isSelected {
+            cell.setSelected()
+        } else {
+            cell.setDeselected()
+        }
         return cell
     }
 
+}
+
+extension DiaryEntryViewController: FoodEntryCellDelegate {
+
+    func deleteSelectedCell() {
+        guard let cellIndex = foodTable.indexPathForSelectedRow?.item else { return }
+        foods.remove(at: cellIndex)
+        foodTable.reloadData()
+    }
+    
 }
