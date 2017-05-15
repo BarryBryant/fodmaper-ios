@@ -36,11 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent;
         
         window.makeKeyAndVisible()
-        
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
+
         return true;
     }
     
@@ -57,11 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func generateOnboardingViewController() {
         //God help me
         let lowAttachment = NSTextAttachment()
-        lowAttachment.image = UIImage(named: "ic_tag_faces_black_48px")?.tintWithColor(color: UIColor.white)
+        lowAttachment.image = UIImage(named: "ic_tag_faces_white_48pt")?.tintWithColor(color: UIColor.white)
         let lowString = NSAttributedString(attachment: lowAttachment)
         
         let moderateAttachment = NSTextAttachment()
-        moderateAttachment.image = UIImage(named: "ic_warning_black_48px")?.tintWithColor(color: UIColor.white)
+        moderateAttachment.image = UIImage(named: "ic_warning_white_48pt")?.tintWithColor(color: UIColor.white)
         let moderateString = NSAttributedString(attachment: moderateAttachment)
         
         let highAttachment = NSTextAttachment()
