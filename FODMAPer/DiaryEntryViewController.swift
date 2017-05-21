@@ -19,6 +19,7 @@ class DiaryEntryViewController: UIViewController {
     
     var entry: DiaryEntry!
     var foods: [String] = []
+    var didEditEntry = false
     
     let repo: DiaryRepository? = DiaryRepository()
     var selectedSeverityNumber = 1
@@ -36,17 +37,20 @@ class DiaryEntryViewController: UIViewController {
     }
     
     @IBAction func didTapMild(_ sender: Any) {
+        didEditEntry = true
         updateSymptomButtons(for: .mild)
         selectedSeverityNumber = 1
         
     }
     
     @IBAction func didTapModerate(_ sender: Any) {
+        didEditEntry = true
         updateSymptomButtons(for: .moderate)
         selectedSeverityNumber = 2
     }
     
     @IBAction func didTapSevere(_ sender: Any) {
+        didEditEntry = true
         updateSymptomButtons(for: .severe)
         selectedSeverityNumber = 3
     }
@@ -64,6 +68,7 @@ class DiaryEntryViewController: UIViewController {
         guard let text = foodField.text,
             text.characters.count > 0
         else { return }
+        didEditEntry = true
         foods.append(text)
         foodField.text = ""
         foodTable.reloadData()
@@ -72,7 +77,20 @@ class DiaryEntryViewController: UIViewController {
     }
     
     @IBAction func didTapBack(_ sender: Any) {
-        self.dismiss(animated: true)
+        if didEditEntry {
+            let alertController = UIAlertController(title: "", message: "Are you sure you want to exit without saving?", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Yes", style: .cancel) { action in
+                self.dismiss(animated: true)
+            }
+            let saveAction = UIAlertAction(title: "Save", style: .default) { action in
+                self.didTapAdd(self)
+            }
+            alertController.addAction(okAction)
+            alertController.addAction(saveAction)
+            present(alertController, animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
     
     private func updateSymptomButtons(for severity: SymptomSeverity) {
