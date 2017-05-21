@@ -78,7 +78,7 @@ class DiaryEntryViewController: UIViewController {
     
     @IBAction func didTapBack(_ sender: Any) {
         if didEditEntry {
-            let alertController = UIAlertController(title: "", message: "Are you sure you want to exit without saving?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Unsaved Changes", message: "Are you sure you want to exit without saving?", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Yes", style: .cancel) { action in
                 self.dismiss(animated: true)
             }
