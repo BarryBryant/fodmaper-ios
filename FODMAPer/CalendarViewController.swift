@@ -28,22 +28,18 @@ class CalendarViewController: UIViewController {
         guard repo != nil else {
             return //show error
         }
-        setUpCalendar()
+        self.setUpCalendar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //Reload data if returning from diary entry
-        if didInitiallyLoad {
-            calendar.reloadData()
-        }
+        calendar.reloadData()
         
         if lastSelectedDate != nil {
             calendar.selectDates(from: lastSelectedDate!, to: lastSelectedDate!)
         }
         
-        didInitiallyLoad = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,14 +52,11 @@ class CalendarViewController: UIViewController {
         calendar.minimumInteritemSpacing = 0
         let currentDate = Date()
         
-        configureCalendarLabels(with: currentDate)
-        
         calendar.scrollToDate(currentDate,
                               triggerScrollToDateDelegate: true,
                               animateScroll: false,
                               preferredScrollPosition: nil,
-                              extraAddedOffset: 0,
-                              completionHandler: nil)
+                              extraAddedOffset: 0, completionHandler: nil)
         
         calendar.selectDates(from: currentDate, to: currentDate)
     }
@@ -121,7 +114,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         }
         configureCalendarLabels(with: currentMonthDate)
     }
-    
+        
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource {

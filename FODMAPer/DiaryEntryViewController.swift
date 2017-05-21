@@ -32,6 +32,7 @@ class DiaryEntryViewController: UIViewController {
         assert(entry != nil)
         foods.append(contentsOf: entry.foodArray)
         updateSymptomButtons(for: entry.severity)
+        foodField.inputAccessoryView = UIView()
     }
     
     @IBAction func didTapMild(_ sender: Any) {
@@ -127,4 +128,17 @@ extension DiaryEntryViewController: FoodEntryCellDelegate {
         foodTable.reloadData()
     }
     
+}
+
+extension DiaryEntryViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == foodField {
+            textField.resignFirstResponder()
+            self.didTapAdd(textField)
+            return true
+        }
+        return true
+    }
+
 }

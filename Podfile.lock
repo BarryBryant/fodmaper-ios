@@ -1,5 +1,6 @@
 PODS:
-  - JTAppleCalendar (7.0.1)
+  - IQKeyboardManagerSwift (4.0.9)
+  - JTAppleCalendar (7.0.2)
   - Onboard (2.3.1)
   - Realm (2.6.2):
     - Realm/Headers (= 2.6.2)
@@ -8,16 +9,28 @@ PODS:
     - Realm (= 2.6.2)
 
 DEPENDENCIES:
-  - JTAppleCalendar (~> 7.0)
+  - IQKeyboardManagerSwift
+  - JTAppleCalendar (from `https://github.com/patchthecode/JTAppleCalendar.git`, branch `master`)
   - Onboard
   - RealmSwift
 
+EXTERNAL SOURCES:
+  JTAppleCalendar:
+    :branch: master
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
+CHECKOUT OPTIONS:
+  JTAppleCalendar:
+    :commit: 3cbfab2382ccb7168a5c22e0081504f43d0d76e6
+    :git: https://github.com/patchthecode/JTAppleCalendar.git
+
 SPEC CHECKSUMS:
-  JTAppleCalendar: 7c8cba3e06fd6fdfed72382eeeb87c304e727ddb
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  JTAppleCalendar: 2928d0368ef9f5278d3fb56e599672482f46de7f
   Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
 
-PODFILE CHECKSUM: 70b0ed89a0597e7e0c35a70c3d9ac06d7e6f6851
+PODFILE CHECKSUM: d977fa47462222a2bc3e72057cb09513068651c7
 
 COCOAPODS: 1.2.1

@@ -6,8 +6,9 @@ target 'FODMAPer' do
 
   # Pods for FODMAPer
   pod 'Onboard'
-  pod 'JTAppleCalendar', '~> 7.0'
+  pod 'JTAppleCalendar', :git => 'https://github.com/patchthecode/JTAppleCalendar.git', :branch => 'master'
   pod 'RealmSwift'
+  pod 'IQKeyboardManagerSwift'
   target 'FODMAPerTests' do
     inherit! :search_paths
     # Pods for testing

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JTAppleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>603A09B9552628E43221CFB467B88C41</key>
+		<key>407FBBB17B26D2B93B985ABC3441493A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>603FA96ABC73F54686283EA3EA68617E</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5F61FFEC6934745F118D34C4A1474CE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B82DF786A711E03A4626D78F3EFE9BE</key>
+		<key>A2C05C8ED14EFB835D478ED0EA701BCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

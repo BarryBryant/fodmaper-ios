@@ -11,6 +11,8 @@ import CoreData
 import Onboard
 import Realm
 import RealmSwift
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent;
         
         window.makeKeyAndVisible()
-
+        IQKeyboardManager.sharedManager().enable = true
         return true;
     }
     
