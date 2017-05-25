@@ -13,6 +13,7 @@ class CalendarCell: JTAppleCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var viewDecoration: UIView!
+    @IBOutlet var decoriationSizes: [NSLayoutConstraint]!
     
     public private(set) var emptyEntry = true
     
@@ -28,6 +29,13 @@ class CalendarCell: JTAppleCell {
         dateLabel.textColor = UIColor.white
         viewDecoration.isHidden = false
         viewDecoration.alpha = 0.5
+    }
+    
+    func toggleIpadSizes() {
+        for constraint in decoriationSizes {
+            constraint.constant = 30
+        }
+        viewDecoration.layer.cornerRadius = 15
     }
     
     func didDeselect(state: CellState) {

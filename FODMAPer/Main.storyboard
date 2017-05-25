@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G92-Z0-Dzl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G92-Z0-Dzl">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -721,6 +721,8 @@
                                                 <connections>
                                                     <outlet property="dateLabel" destination="X6d-2S-IMD" id="nKJ-c6-RqL"/>
                                                     <outlet property="viewDecoration" destination="dwb-Yn-kNv" id="Qbe-gi-w5h"/>
+                                                    <outletCollection property="decoriationSizes" destination="8I4-ZP-eLq" collectionClass="NSMutableArray" id="wx6-Oo-rML"/>
+                                                    <outletCollection property="decoriationSizes" destination="Y66-aA-fHj" collectionClass="NSMutableArray" id="gWX-U6-tDK"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -776,6 +778,7 @@
                     <tabBarItem key="tabBarItem" title="Diary" image="ic_event_white" id="QIJ-TN-YQS"/>
                     <connections>
                         <outlet property="calendar" destination="vc4-6M-gUp" id="7II-Rl-XMQ"/>
+                        <outlet property="calendarHeight" destination="3Zf-4p-5Gn" id="tWF-49-v0N"/>
                         <outlet property="diaryButton" destination="IXv-2h-9Z8" id="xku-re-bB9"/>
                         <outlet property="monthLabel" destination="QOa-8A-bAi" id="OIH-Rg-fEq"/>
                         <outlet property="yearLabel" destination="zhB-x8-S1C" id="5Op-rU-iXK"/>

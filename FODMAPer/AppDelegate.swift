@@ -53,17 +53,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func generateOnboardingViewController() {
+        let isiPad = UIDevice.current.model.contains("Pad")
+        let imageExtension = isiPad ? "" : "_48pt"
         //God help me
         let lowAttachment = NSTextAttachment()
-        lowAttachment.image = UIImage(named: "ic_tag_faces_white_48pt")?.tintWithColor(color: UIColor.white)
+        lowAttachment.image = UIImage(named: "ic_tag_faces_white\(imageExtension)")?.tintWithColor(color: UIColor.white)
         let lowString = NSAttributedString(attachment: lowAttachment)
         
         let moderateAttachment = NSTextAttachment()
-        moderateAttachment.image = UIImage(named: "ic_warning_white_48pt")?.tintWithColor(color: UIColor.white)
+        moderateAttachment.image = UIImage(named: "ic_warning_white\(imageExtension)")?.tintWithColor(color: UIColor.white)
         let moderateString = NSAttributedString(attachment: moderateAttachment)
         
         let highAttachment = NSTextAttachment()
-        highAttachment.image = UIImage(named: "ic_clear_white_48pt")?.tintWithColor(color: UIColor.white)
+        highAttachment.image = UIImage(named: "ic_clear_white\(imageExtension)")?.tintWithColor(color: UIColor.white)
         let highString = NSAttributedString(attachment: highAttachment)
         
         let myString = NSMutableAttributedString(string: "")
@@ -75,7 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myString.append(lowString)
         myString.append(NSMutableAttributedString(string: "\nLow FODMAPs\n\n"))
         
-        let firstPage = OnboardingContentViewController(title: "FODMAPer", body: "A pocket reference for the low FODMAP diet.", image: UIImage(named: "onboarding_icon"), buttonText: nil) { }
+        let iconImageName = isiPad ? "onboarding_icon_small" : "onboarding_icon"
+        let firstPage = OnboardingContentViewController(title: "FODMAPer", body: "A pocket reference for the low FODMAP diet.", image: UIImage(named: iconImageName), buttonText: nil) { }
         firstPage.view.backgroundColor = UIColor(red:0.77, green:0.50, blue:0.85, alpha:1.0)
         
         let secondPage = OnboardingContentViewController(title: "What is a FODMAP?", body: "Fermentable \nOligosaccharides \nDisaccharides \nMonosaccharides \nAnd Polyols \n(Indigestible Sugars)", image: nil, buttonText: nil) { }

@@ -17,6 +17,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var diaryButton: UIButton!
+    @IBOutlet var calendarHeight: NSLayoutConstraint!
     
     let formatter = DateFormatter()
     var didInitiallyLoad = false
@@ -50,6 +51,9 @@ class CalendarViewController: UIViewController {
     func setUpCalendar() {
         calendar.minimumLineSpacing = 0
         calendar.minimumInteritemSpacing = 0
+        if UIDevice.current.model.contains("Pad") {
+            calendarHeight.constant = 200
+        }
         let currentDate = Date()
         
         calendar.scrollToDate(currentDate,
@@ -121,6 +125,9 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarCell", for: indexPath) as! CalendarCell
+        if UIDevice.current.model.contains("Pad") {
+            cell.toggleIpadSizes()
+        }
         let entry = repo?.getDiaryEntryForDate(date)
         cell.configure(with: cellState, entry: entry)
         if cellState.isSelected { cell.didSelect() }
